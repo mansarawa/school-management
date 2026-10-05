@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty & Teachers - EduManage</title>
+  <meta name="description" content="Faculty & Teachers directory for Delhi Public Academy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sidebar-overlay"></div>
+
+  <div class="app-wrapper">
+    <!-- SIDEBAR -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <a href="dashboard.html" class="sidebar-brand">
+          <div class="sidebar-brand-icon"><i class="bi bi-mortarboard-fill"></i></div>
+          <div><span class="sidebar-brand-text">EduManage</span><span class="sidebar-brand-badge">SaaS</span></div>
+        </a>
+      </div>
+
+      <div class="sidebar-menu">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a href="dashboard.html" class="nav-link-ed"><i class="bi bi-grid-1x2-fill"></i><span class="nav-text">Dashboard</span></a></li>
+          <li class="sidebar-section-title">Academic</li>
+          <li class="nav-item"><a href="students.html" class="nav-link-ed"><i class="bi bi-people-fill"></i><span class="nav-text">Students</span></a></li>
+          <li class="nav-item"><a href="teachers.html" class="nav-link-ed active"><i class="bi bi-person-video3"></i><span class="nav-text">Teachers</span></a></li>
+          <li class="nav-item"><a href="classes.html" class="nav-link-ed"><i class="bi bi-building"></i><span class="nav-text">Classes</span></a></li>
+          <li class="nav-item"><a href="subjects.html" class="nav-link-ed"><i class="bi bi-book-half"></i><span class="nav-text">Subjects</span></a></li>
+          <li class="nav-item"><a href="attendance.html" class="nav-link-ed"><i class="bi bi-calendar-check-fill"></i><span class="nav-text">Attendance</span></a></li>
+          <li class="nav-item"><a href="timetable.html" class="nav-link-ed"><i class="bi bi-calendar3-week-fill"></i><span class="nav-text">Timetable</span></a></li>
+          <li class="nav-item"><a href="exams.html" class="nav-link-ed"><i class="bi bi-journal-check"></i><span class="nav-text">Exams</span></a></li>
+          <li class="nav-item"><a href="exam-results.html" class="nav-link-ed"><i class="bi bi-trophy-fill"></i><span class="nav-text">Exam Results</span></a></li>
+          <li class="nav-item"><a href="homework.html" class="nav-link-ed"><i class="bi bi-journal-bookmark-fill"></i><span class="nav-text">Homework</span></a></li>
+          <li class="sidebar-section-title">Finance</li>
+          <li class="nav-item"><a href="fees.html" class="nav-link-ed"><i class="bi bi-cash-coin"></i><span class="nav-text">Fees</span></a></li>
+          <li class="nav-item"><a href="fee-details.html" class="nav-link-ed"><i class="bi bi-receipt"></i><span class="nav-text">Fee Invoices</span></a></li>
+          <li class="sidebar-section-title">Management</li>
+          <li class="nav-item"><a href="parents.html" class="nav-link-ed"><i class="bi bi-person-hearts"></i><span class="nav-text">Parents</span></a></li>
+          <li class="nav-item"><a href="library.html" class="nav-link-ed"><i class="bi bi-collection-fill"></i><span class="nav-text">Library</span></a></li>
+          <li class="nav-item"><a href="transport.html" class="nav-link-ed"><i class="bi bi-bus-front-fill"></i><span class="nav-text">Transport</span></a></li>
+          <li class="nav-item"><a href="notices.html" class="nav-link-ed"><i class="bi bi-megaphone-fill"></i><span class="nav-text">Notices</span></a></li>
+          <li class="nav-item"><a href="events.html" class="nav-link-ed"><i class="bi bi-calendar-event-fill"></i><span class="nav-text">Events</span></a></li>
+          <li class="nav-item"><a href="messages.html" class="nav-link-ed"><i class="bi bi-chat-dots-fill"></i><span class="nav-text">Messages</span><span class="badge bg-danger rounded-pill ms-auto">3</span></a></li>
+          <li class="sidebar-section-title">Reports</li>
+          <li class="nav-item"><a href="reports.html" class="nav-link-ed"><i class="bi bi-file-earmark-bar-graph-fill"></i><span class="nav-text">Reports</span></a></li>
+          <li class="sidebar-section-title">System</li>
+          <li class="nav-item"><a href="settings.html" class="nav-link-ed"><i class="bi bi-gear-fill"></i><span class="nav-text">Settings</span></a></li>
+          <li class="nav-item"><a href="profile.html" class="nav-link-ed"><i class="bi bi-person-circle"></i><span class="nav-text">Profile</span></a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user-card">
+          <div class="avatar-student" style="background:#4338ca;color:#fff;">RS</div>
+          <div class="user-details overflow-hidden">
+            <div class="fw-semibold text-white text-truncate small">Dr. Rajesh Sharma</div>
+            <div class="small text-muted text-truncate" style="font-size:0.75rem;">Principal / Admin</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN WRAPPER -->
+    <div class="app-main">
+      <header class="app-topbar">
+        <div class="topbar-left">
+          <button class="btn btn-icon d-none d-lg-flex" id="sidebarToggleBtn"><i class="bi bi-list fs-5"></i></button>
+          <button class="btn btn-icon d-lg-none" id="mobileSidebarToggle"><i class="bi bi-list fs-5"></i></button>
+          <button class="topbar-search-trigger" type="button">
+            <i class="bi bi-search"></i><span>Search faculty, subjects...</span>
+            <kbd class="kbd-shortcut d-none d-md-inline-block">Ctrl K</kbd>
+          </button>
+        </div>
+        <div class="topbar-right">
+          <button class="btn btn-icon theme-toggle-btn" type="button"><i class="bi bi-moon-stars-fill"></i></button>
+          <a href="messages.html" class="btn btn-icon"><i class="bi bi-chat-dots"></i><span class="badge-dot"></span></a>
+          <div class="dropdown">
+            <button class="btn p-0 border-0 d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown">
+              <div class="avatar-student" style="background:#4338ca;color:#fff;">RS</div>
+              <div class="text-start d-none d-xl-block">
+                <div class="fw-bold small text-dark-emphasis mb-0">Dr. Rajesh Sharma</div>
+                <small class="text-muted" style="font-size:0.75rem;">Administrator</small>
+              </div>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+              <li><a class="dropdown-item py-2" href="profile.html"><i class="bi bi-person me-2"></i> My Profile</a></li>
+              <li><a class="dropdown-item py-2" href="settings.html"><i class="bi bi-gear me-2"></i> Settings</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item py-2 text-danger" href="index.html"><i class="bi bi-box-arrow-right me-2"></i> Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- CONTENT -->
+      <main class="app-content">
+        <!-- Header -->
+        <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4">
+          <div>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-1 small">
+                <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                <li class="breadcrumb-item active">Teachers</li>
+              </ol>
+            </nav>
+            <h2 class="fw-bold mb-0">Faculty Directory</h2>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-ed-outline" onclick="EduManage.showToast('Faculty attendance roster generated', 'info', 'Report')">
+              <i class="bi bi-file-earmark-spreadsheet"></i> Faculty Roster
+            </button>
+            <button class="btn btn-ed-primary" data-bs-toggle="modal" data-bs-target="#addTeacherModal">
+              <i class="bi bi-plus-lg"></i> Add New Teacher
+            </button>
+          </div>
+        </div>
+
+        <!-- STAT METRICS -->
+        <div class="row g-3 mb-4">
+          <div class="col-6 col-lg-3">
+            <div class="stat-card">
+              <div>
+                <div class="stat-label">Total Faculty</div>
+                <div class="stat-value">86</div>
+                <div class="stat-trend up">Full capacity</div>
+              </div>
+              <div class="stat-icon primary"><i class="bi bi-people"></i></div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-card">
+              <div>
+                <div class="stat-label">Full-Time PGT/TGT</div>
+                <div class="stat-value text-success">78</div>
+                <div class="stat-trend up">90% Staffed</div>
+              </div>
+              <div class="stat-icon success"><i class="bi bi-person-check"></i></div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-card">
+              <div>
+                <div class="stat-label">Visiting Faculty</div>
+                <div class="stat-value text-info">8</div>
+                <div class="stat-trend text-muted bg-light">Specialist labs</div>
+              </div>
+              <div class="stat-icon info"><i class="bi bi-mortarboard"></i></div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-card">
+              <div>
+                <div class="stat-label">On Leave Today</div>
+                <div class="stat-value text-warning">2</div>
+                <div class="stat-trend text-muted bg-light">Arranged subs</div>
+              </div>
+              <div class="stat-icon warning"><i class="bi bi-clock-history"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="ed-card mb-4">
+          <div class="ed-card-body p-3">
+            <div class="row g-2 align-items-center">
+              <div class="col-12 col-md-5">
+                <div class="input-group">
+                  <span class="input-group-text bg-transparent text-muted border-end-0"><i class="bi bi-search"></i></span>
+                  <input type="text" id="teacherSearchInput" class="form-control border-start-0" placeholder="Search by name, subject, or email..." onkeyup="filterTeacherTable()">
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <select id="teacherSubjectFilter" class="form-select" onchange="filterTeacherTable()">
+                  <option value="">All Subjects</option>
+                  <option value="Mathematics">Mathematics</option>
+                  <option value="Physics">Physics</option>
+                  <option value="Chemistry">Chemistry</option>
+                  <option value="English">English</option>
+                  <option value="Computer Science">Computer Science</option>
+                  <option value="Biology">Biology</option>
+                </select>
+              </div>
+              <div class="col-6 col-md-2">
+                <select id="teacherStatusFilter" class="form-select" onchange="filterTeacherTable()">
+                  <option value="">All Statuses</option>
+                  <option value="Active">Active</option>
+                  <option value="On Leave">On Leave</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-2 text-md-end">
+                <span class="small text-muted">Showing <strong>5 of 86</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Table Card -->
+        <div class="ed-card">
+          <div class="table-responsive">
+            <table class="table table-modern align-middle mb-0" id="teachersTable">
+              <thead>
+                <tr>
+                  <th>Teacher ID</th>
+                  <th>Teacher Name</th>
+                  <th>Primary Subject</th>
+                  <th>Classes Assigned</th>
+                  <th>Phone Number</th>
+                  <th>Email</th>
+                  <th>Joining Date</th>
+                  <th>Status</th>
+                  <th class="text-end">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="teachersTableBody">
+                <tr>
+                  <td><span class="fw-bold text-primary">#TCH-101</span></td>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="avatar-student" style="background:#e0e7ff;color:#4338ca;">SK</div>
+                      <div>
+                        <div class="fw-semibold"><a href="teacher-details.html" class="text-reset text-decoration-none">Dr. Sunita Kapoor</a></div>
+                        <small class="text-muted">Ph.D. (Math) • HOD</small>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="badge bg-indigo-50 text-indigo border" style="background:#e0e7ff;color:#4338ca;">Mathematics</span></td>
+                  <td>Class 10-A, 12-A</td>
+                  <td>+91 98101 23456</td>
+                  <td>sunita.kapoor@dpa.edu.in</td>
+                  <td>14 Jul 2018</td>
+                  <td><span class="badge-status active"><i class="bi bi-circle-fill" style="font-size:6px;"></i> Active</span></td>
+                  <td class="text-end">
+                    <div class="dropdown">
+                      <button class="btn btn-sm btn-light border" type="button" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></button>
+                      <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                        <li><a class="dropdown-item" href="teacher-details.html"><i class="bi bi-eye text-primary me-2"></i> Profile & Schedule</a></li>
+                        <li><a class="dropdown-item" href="timetable.html"><i class="bi bi-calendar3 me-2"></i> View Timetable</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="#" onclick="deleteTeacherRow(this)"><i class="bi bi-trash me-2"></i> Remove</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><span class="fw-bold text-primary">#TCH-102</span></td>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="avatar-student" style="background:#fce7f3;color:#db2777;">RN</div>
+                      <div>
+                        <div class="fw-semibold"><a href="teacher-details.html" class="text-reset text-decoration-none">Mr. Rajesh Nair</a></div>
+                        <small class="text-muted">M.Sc. Physics (Delhi Univ)</small>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="badge bg-info-subtle text-info border">Physics</span></td>
+                  <td>Class 11-A, 12-B</td>
+                  <td>+91 98202 34567</td>
+                  <td>rajesh.nair@dpa.edu.in</td>
+                  <td>02 Aug 2021</td>
+                  <td><span class="badge-status active"><i class="bi bi-circle-fill" style="font-size:6px;"></i> Active</span></td>
+                  <td class="text-end">
+                    <div class="dropdown">
+                      <button class="btn btn-sm btn-light border" type="button" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></button>
+                      <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                        <li><a class="dropdown-item" href="teacher-details.html"><i class="bi bi-eye text-primary me-2"></i> Profile & Schedule</a></li>
+                        <li><a class="dropdown-item" href="timetable.html"><i class="bi bi-calendar3 me-2"></i> View Timetable</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="#" onclick="deleteTeacherRow(this)"><i class="bi bi-trash me-2"></i> Remove</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><span class="fw-bold text-primary">#TCH-103</span></td>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="avatar-student" style="background:#dcfce7;color:#16a34a;">PS</div>
+                      <div>
+                        <div class="fw-semibold"><a href="teacher-details.html" class="text-reset text-decoration-none">Mrs. Pooja Sharma</a></div>
+                        <small class="text-muted">M.A. English, B.Ed.</small>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="badge bg-success-subtle text-success border">English</span></td>
+                  <td>Class 9-A, 10-B</td>
+                  <td>+91 97113 45678</td>
+                  <td>pooja.sharma@dpa.edu.in</td>
+                  <td>19 Mar 2019</td>
+                  <td><span class="badge-status active"><i class="bi bi-circle-fill" style="font-size:6px;"></i> Active</span></td>
+                  <td class="text-end">
+                    <div class="dropdown">
+                      <button class="btn btn-sm btn-light border" type="button" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></button>
+                      <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                        <li><a class="dropdown-item" href="teacher-details.html"><i class="bi bi-eye text-primary me-2"></i> Profile & Schedule</a></li>
+                        <li><a class="dropdown-item" href="timetable.html"><i class="bi bi-calendar3 me-2"></i> View Timetable</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="#" onclick="deleteTeacherRow(this)"><i class="bi bi-trash me-2"></i> Remove</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><span class="fw-bold text-primary">#TCH-104</span></td>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="avatar-student" style="background:#fef3c7;color:#d97706;">VM</div>
+                      <div>
+                        <div class="fw-semibold"><a href="teacher-details.html" class="text-reset text-decoration-none">Mr. Vikas Malhotra</a></div>
+                        <small class="text-muted">MCA, Computer Science</small>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="badge bg-warning-subtle text-warning border">Computer Science</span></td>
+                  <td>Class 9 to 12</td>
+                  <td>+91 99104 56789</td>
+                  <td>vikas.malhotra@dpa.edu.in</td>
+                  <td>10 Jun 2022</td>
+                  <td><span class="badge-status active"><i class="bi bi-circle-fill" style="font-size:6px;"></i> Active</span></td>
+                  <td class="text-end">
+                    <div class="dropdown">
+                      <button class="btn btn-sm btn-light border" type="button" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></button>
+                      <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                        <li><a class="dropdown-item" href="teacher-details.html"><i class="bi bi-eye text-primary me-2"></i> Profile & Schedule</a></li>
+                        <li><a class="dropdown-item" href="timetable.html"><i class="bi bi-calendar3 me-2"></i> View Timetable</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="#" onclick="deleteTeacherRow(this)"><i class="bi bi-trash me-2"></i> Remove</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><span class="fw-bold text-primary">#TCH-105</span></td>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="avatar-student" style="background:#e0f2fe;color:#0284c7;">AD</div>
+                      <div>
+                        <div class="fw-semibold"><a href="teacher-details.html" class="text-reset text-decoration-none">Dr. Anita Desai</a></div>
+                        <small class="text-muted">M.Sc., Ph.D. Chemistry</small>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="badge bg-primary-subtle text-primary border">Chemistry</span></td>
+                  <td>Class 11-B, 12-A</td>
+                  <td>+91 98995 67890</td>
+                  <td>anita.desai@dpa.edu.in</td>
+                  <td>15 Jan 2017</td>
+                  <td><span class="badge-status late"><i class="bi bi-circle-fill" style="font-size:6px;"></i> On Leave</span></td>
+                  <td class="text-end">
+                    <div class="dropdown">
+                      <button class="btn btn-sm btn-light border" type="button" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></button>
+                      <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                        <li><a class="dropdown-item" href="teacher-details.html"><i class="bi bi-eye text-primary me-2"></i> Profile & Schedule</a></li>
+                        <li><a class="dropdown-item" href="timetable.html"><i class="bi bi-calendar3 me-2"></i> View Timetable</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="#" onclick="deleteTeacherRow(this)"><i class="bi bi-trash me-2"></i> Remove</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+
+      <footer class="app-footer">
+        <div>&copy; 2026 <strong>EduManage SaaS</strong>. Delhi Public Academy.</div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- ADD TEACHER MODAL -->
+  <div class="modal fade" id="addTeacherModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <h5 class="modal-title fw-bold"><i class="bi bi-person-badge text-primary me-2"></i>Onboard Faculty Member</h5>
+            <small class="text-muted">Add new teacher credentials and assigned classes</small>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <form onsubmit="handleSaveTeacher(event)">
+          <div class="modal-body">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label" for="tchName">Full Name *</label>
+                <input type="text" class="form-control" id="tchName" required placeholder="e.g. Dr. Aruna Sen">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="tchEmail">Official Email *</label>
+                <input type="email" class="form-control" id="tchEmail" required placeholder="aruna.sen@dpa.edu.in">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="tchPhone">Phone Number *</label>
+                <input type="tel" class="form-control" id="tchPhone" required placeholder="+91 98111 22334">
+              </div>
+              <div class="col-md-3">
+                <label class="form-label" for="tchGender">Gender</label>
+                <select class="form-select" id="tchGender">
+                  <option value="Female">Female</option>
+                  <option value="Male">Male</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label" for="tchDob">Date of Birth</label>
+                <input type="date" class="form-control" id="tchDob" value="1988-06-15">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label" for="tchQualification">Highest Qualification *</label>
+                <input type="text" class="form-control" id="tchQualification" required placeholder="e.g. M.Sc. Biology, B.Ed.">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="tchExp">Teaching Experience (Years)</label>
+                <input type="number" class="form-control" id="tchExp" value="6">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label" for="tchSubject">Primary Subject *</label>
+                <select class="form-select" id="tchSubject" required>
+                  <option value="Mathematics">Mathematics</option>
+                  <option value="Physics">Physics</option>
+                  <option value="Chemistry">Chemistry</option>
+                  <option value="Biology">Biology</option>
+                  <option value="English">English</option>
+                  <option value="Computer Science">Computer Science</option>
+                  <option value="Social Studies">Social Studies</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="tchClasses">Assigned Classes *</label>
+                <input type="text" class="form-control" id="tchClasses" required placeholder="e.g. Class 11-A, 12-A">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label" for="tchJoinDate">Joining Date</label>
+                <input type="date" class="form-control" id="tchJoinDate" value="2026-10-04">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="tchPhoto">Profile Photo</label>
+                <input type="file" class="form-control" id="tchPhoto" accept="image/*">
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="tchAddress">Residential Address</label>
+                <textarea class="form-control" id="tchAddress" rows="2" placeholder="Teacher residential address..."></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-ed-outline" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-ed-primary"><i class="bi bi-check2"></i> Add Faculty Member</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    function filterTeacherTable() {
+      const q = document.getElementById('teacherSearchInput').value.toLowerCase();
+      const subj = document.getElementById('teacherSubjectFilter').value.toLowerCase();
+      const stat = document.getElementById('teacherStatusFilter').value.toLowerCase();
+
+      const rows = document.querySelectorAll('#teachersTableBody tr');
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        const matchesQ = text.includes(q);
+        const matchesSubj = !subj || text.includes(subj);
+        const matchesStat = !stat || text.includes(stat);
+        row.style.display = (matchesQ && matchesSubj && matchesStat) ? '' : 'none';
+      });
+    }
+
+    function handleSaveTeacher(e) {
+      e.preventDefault();
+      const name = document.getElementById('tchName').value;
+      const email = document.getElementById('tchEmail').value;
+      const phone = document.getElementById('tchPhone').value;
+      const subj = document.getElementById('tchSubject').value;
+      const cls = document.getElementById('tchClasses').value;
+      const qual = document.getElementById('tchQualification').value;
+
+      const tbody = document.getElementById('teachersTableBody');
+      const initials = name.split(' ').map(n => n[0]).slice(0,2).join('').toUpperCase();
+      const newRow = document.createElement('tr');
+      newRow.innerHTML = `
+        <td><span class="fw-bold text-primary">#TCH-106</span></td>
+        <td>
+          <div class="d-flex align-items-center gap-2">
+            <div class="avatar-student" style="background:#e0e7ff;color:#4338ca;">${initials}</div>
+            <div>
+              <div class="fw-semibold"><a href="teacher-details.html" class="text-reset text-decoration-none">${name}</a></div>
+              <small class="text-muted">${qual}</small>
+            </div>
+          </div>
+        </td>
+        <td><span class="badge bg-primary-subtle text-primary border">${subj}</span></td>
+        <td>${cls}</td>
+        <td>${phone}</td>
+        <td>${email}</td>
+        <td>Just Now</td>
+        <td><span class="badge-status active"><i class="bi bi-circle-fill" style="font-size:6px;"></i> Active</span></td>
+        <td class="text-end">
+          <div class="dropdown">
+            <button class="btn btn-sm btn-light border" type="button" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+              <li><a class="dropdown-item" href="teacher-details.html"><i class="bi bi-eye text-primary me-2"></i> Profile & Schedule</a></li>
+              <li><a class="dropdown-item" href="timetable.html"><i class="bi bi-calendar3 me-2"></i> View Timetable</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger" href="#" onclick="deleteTeacherRow(this)"><i class="bi bi-trash me-2"></i> Remove</a></li>
+            </ul>
+          </div>
+        </td>
+      `;
+      tbody.prepend(newRow);
+
+      const modalEl = document.getElementById('addTeacherModal');
+      bootstrap.Modal.getInstance(modalEl).hide();
+      EduManage.showToast(`${name} added to faculty roster!`, 'success', 'Teacher Onboarded');
+    }
+
+    function deleteTeacherRow(btn) {
+      if (confirm('Are you sure you want to remove this teacher from active faculty?')) {
+        btn.closest('tr').remove();
+        EduManage.showToast('Teacher record removed from roster.', 'danger', 'Deleted');
+      }
+    }
+  </script>
+</body>
+</html>

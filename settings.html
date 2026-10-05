@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Settings - EduManage</title>
+  <meta name="description" content="Configure school information, academic session, notification dispatchers, and security for Delhi Public Academy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sidebar-overlay"></div>
+
+  <div class="app-wrapper">
+    <!-- SIDEBAR -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <a href="dashboard.html" class="sidebar-brand">
+          <div class="sidebar-brand-icon"><i class="bi bi-mortarboard-fill"></i></div>
+          <div><span class="sidebar-brand-text">EduManage</span><span class="sidebar-brand-badge">SaaS</span></div>
+        </a>
+      </div>
+
+      <div class="sidebar-menu">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a href="dashboard.html" class="nav-link-ed"><i class="bi bi-grid-1x2-fill"></i><span class="nav-text">Dashboard</span></a></li>
+          <li class="sidebar-section-title">Academic</li>
+          <li class="nav-item"><a href="students.html" class="nav-link-ed"><i class="bi bi-people-fill"></i><span class="nav-text">Students</span></a></li>
+          <li class="nav-item"><a href="teachers.html" class="nav-link-ed"><i class="bi bi-person-video3"></i><span class="nav-text">Teachers</span></a></li>
+          <li class="nav-item"><a href="classes.html" class="nav-link-ed"><i class="bi bi-building"></i><span class="nav-text">Classes</span></a></li>
+          <li class="nav-item"><a href="subjects.html" class="nav-link-ed"><i class="bi bi-book-half"></i><span class="nav-text">Subjects</span></a></li>
+          <li class="nav-item"><a href="attendance.html" class="nav-link-ed"><i class="bi bi-calendar-check-fill"></i><span class="nav-text">Attendance</span></a></li>
+          <li class="nav-item"><a href="timetable.html" class="nav-link-ed"><i class="bi bi-calendar3-week-fill"></i><span class="nav-text">Timetable</span></a></li>
+          <li class="nav-item"><a href="exams.html" class="nav-link-ed"><i class="bi bi-journal-check"></i><span class="nav-text">Exams</span></a></li>
+          <li class="nav-item"><a href="exam-results.html" class="nav-link-ed"><i class="bi bi-trophy-fill"></i><span class="nav-text">Exam Results</span></a></li>
+          <li class="nav-item"><a href="homework.html" class="nav-link-ed"><i class="bi bi-journal-bookmark-fill"></i><span class="nav-text">Homework</span></a></li>
+          <li class="sidebar-section-title">Finance</li>
+          <li class="nav-item"><a href="fees.html" class="nav-link-ed"><i class="bi bi-cash-coin"></i><span class="nav-text">Fees</span></a></li>
+          <li class="nav-item"><a href="fee-details.html" class="nav-link-ed"><i class="bi bi-receipt"></i><span class="nav-text">Fee Invoices</span></a></li>
+          <li class="sidebar-section-title">Management</li>
+          <li class="nav-item"><a href="parents.html" class="nav-link-ed"><i class="bi bi-person-hearts"></i><span class="nav-text">Parents</span></a></li>
+          <li class="nav-item"><a href="library.html" class="nav-link-ed"><i class="bi bi-collection-fill"></i><span class="nav-text">Library</span></a></li>
+          <li class="nav-item"><a href="transport.html" class="nav-link-ed"><i class="bi bi-bus-front-fill"></i><span class="nav-text">Transport</span></a></li>
+          <li class="nav-item"><a href="notices.html" class="nav-link-ed"><i class="bi bi-megaphone-fill"></i><span class="nav-text">Notices</span></a></li>
+          <li class="nav-item"><a href="events.html" class="nav-link-ed"><i class="bi bi-calendar-event-fill"></i><span class="nav-text">Events</span></a></li>
+          <li class="nav-item"><a href="messages.html" class="nav-link-ed"><i class="bi bi-chat-dots-fill"></i><span class="nav-text">Messages</span><span class="badge bg-danger rounded-pill ms-auto">3</span></a></li>
+          <li class="sidebar-section-title">Reports</li>
+          <li class="nav-item"><a href="reports.html" class="nav-link-ed"><i class="bi bi-file-earmark-bar-graph-fill"></i><span class="nav-text">Reports</span></a></li>
+          <li class="sidebar-section-title">System</li>
+          <li class="nav-item"><a href="settings.html" class="nav-link-ed active"><i class="bi bi-gear-fill"></i><span class="nav-text">Settings</span></a></li>
+          <li class="nav-item"><a href="profile.html" class="nav-link-ed"><i class="bi bi-person-circle"></i><span class="nav-text">Profile</span></a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user-card">
+          <div class="avatar-student" style="background:#4338ca;color:#fff;">RS</div>
+          <div class="user-details overflow-hidden">
+            <div class="fw-semibold text-white text-truncate small">Dr. Rajesh Sharma</div>
+            <div class="small text-muted text-truncate" style="font-size:0.75rem;">Principal / Admin</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="app-main">
+      <header class="app-topbar">
+        <div class="topbar-left">
+          <button class="btn btn-icon d-none d-lg-flex" id="sidebarToggleBtn"><i class="bi bi-list fs-5"></i></button>
+          <button class="btn btn-icon d-lg-none" id="mobileSidebarToggle"><i class="bi bi-list fs-5"></i></button>
+          <button class="topbar-search-trigger" type="button">
+            <i class="bi bi-search"></i><span>Search settings...</span>
+            <kbd class="kbd-shortcut d-none d-md-inline-block">Ctrl K</kbd>
+          </button>
+        </div>
+        <div class="topbar-right">
+          <button class="btn btn-icon theme-toggle-btn" type="button"><i class="bi bi-moon-stars-fill"></i></button>
+          <a href="messages.html" class="btn btn-icon"><i class="bi bi-chat-dots"></i><span class="badge-dot"></span></a>
+          <div class="dropdown">
+            <button class="btn p-0 border-0 d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown">
+              <div class="avatar-student" style="background:#4338ca;color:#fff;">RS</div>
+              <div class="text-start d-none d-xl-block">
+                <div class="fw-bold small text-dark-emphasis mb-0">Dr. Rajesh Sharma</div>
+                <small class="text-muted" style="font-size:0.75rem;">Administrator</small>
+              </div>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+              <li><a class="dropdown-item py-2" href="profile.html"><i class="bi bi-person me-2"></i> My Profile</a></li>
+              <li><a class="dropdown-item py-2" href="settings.html"><i class="bi bi-gear me-2"></i> Settings</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item py-2 text-danger" href="index.html"><i class="bi bi-box-arrow-right me-2"></i> Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- PAGE CONTENT -->
+      <main class="app-content">
+        <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4">
+          <div>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-1 small">
+                <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                <li class="breadcrumb-item active">Settings</li>
+              </ol>
+            </nav>
+            <h2 class="fw-bold mb-0">General School & System Settings</h2>
+          </div>
+          <button class="btn btn-ed-primary" onclick="handleSaveAllSettings()">
+            <i class="bi bi-check2-circle"></i> Save All Changes
+          </button>
+        </div>
+
+        <div class="row g-4">
+          <!-- 1. School Information -->
+          <div class="col-12 col-xl-6">
+            <div class="ed-card h-100">
+              <div class="ed-card-header">
+                <h5 class="mb-0 fw-bold"><i class="bi bi-building text-primary me-2"></i>School Identity & Contact</h5>
+              </div>
+              <div class="ed-card-body">
+                <form id="schoolInfoForm">
+                  <div class="mb-3">
+                    <label class="form-label" for="instName">School Name</label>
+                    <input type="text" class="form-control" id="instName" value="Delhi Public Academy">
+                  </div>
+                  <div class="row g-2 mb-3">
+                    <div class="col-6">
+                      <label class="form-label" for="instEmail">Official Email</label>
+                      <input type="email" class="form-control" id="instEmail" value="admin@dpa.edu.in">
+                    </div>
+                    <div class="col-6">
+                      <label class="form-label" for="instPhone">Phone Number</label>
+                      <input type="tel" class="form-control" id="instPhone" value="+91 11 4982 7700">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="instAddress">Address</label>
+                    <input type="text" class="form-control" id="instAddress" value="Institutional Area, Sector 14, Rohini, New Delhi - 110085">
+                  </div>
+                  <div class="row g-2 mb-3">
+                    <div class="col-6">
+                      <label class="form-label" for="instWeb">Website URL</label>
+                      <input type="url" class="form-control" id="instWeb" value="https://www.dpa.edu.in">
+                    </div>
+                    <div class="col-6">
+                      <label class="form-label" for="instAff">Affiliation Code</label>
+                      <input type="text" class="form-control" id="instAff" value="CBSE/AFF/2730198">
+                    </div>
+                  </div>
+                  <div class="mb-0">
+                    <label class="form-label" for="instLogo">Update School Crest / Logo</label>
+                    <input type="file" class="form-control" id="instLogo" accept="image/*">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Academic Settings -->
+          <div class="col-12 col-xl-6">
+            <div class="ed-card h-100">
+              <div class="ed-card-header">
+                <h5 class="mb-0 fw-bold"><i class="bi bi-mortarboard text-primary me-2"></i>Academic Session & Grading</h5>
+              </div>
+              <div class="ed-card-body">
+                <form id="academicConfigForm">
+                  <div class="mb-3">
+                    <label class="form-label" for="acadSession">Active Academic Session</label>
+                    <select class="form-select" id="acadSession">
+                      <option selected>2026 - 2027 (Current Active)</option>
+                      <option>2027 - 2028 (Upcoming Planning)</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="acadTerm">Current Working Term</label>
+                    <select class="form-select" id="acadTerm">
+                      <option selected>Term 2 (Mid-Term)</option>
+                      <option>Term 1 (Completed)</option>
+                      <option>Term 3 (Final)</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="acadGrading">Grading System Framework</label>
+                    <select class="form-select" id="acadGrading">
+                      <option selected>CBSE Standard 9-Point Scale (A1 to E)</option>
+                      <option>ICSE Percentage & GPA Framework</option>
+                      <option>Continuous and Comprehensive Evaluation (CCE)</option>
+                    </select>
+                  </div>
+                  <div class="mb-0">
+                    <label class="form-label" for="attMinCriteria">Minimum Mandatory Attendance (%)</label>
+                    <input type="number" class="form-control" id="attMinCriteria" value="75">
+                    <small class="text-muted">Students falling below this threshold are flagged in report card generation.</small>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Notification Dispatch Settings -->
+          <div class="col-12 col-xl-6">
+            <div class="ed-card h-100">
+              <div class="ed-card-header">
+                <h5 class="mb-0 fw-bold"><i class="bi bi-bell text-primary me-2"></i>Notification & Dispatch Gateways</h5>
+              </div>
+              <div class="ed-card-body">
+                <div class="list-group list-group-flush">
+                  <div class="list-group-item d-flex justify-content-between align-items-center px-0 py-3">
+                    <div>
+                      <div class="fw-bold">Email Notifications & Circulars</div>
+                      <small class="text-muted">Dispatch report cards and receipts to parents' verified email addresses</small>
+                    </div>
+                    <div class="form-check form-switch fs-5">
+                      <input class="form-check-input" type="checkbox" id="emailNotifToggle" checked>
+                    </div>
+                  </div>
+
+                  <div class="list-group-item d-flex justify-content-between align-items-center px-0 py-3">
+                    <div>
+                      <div class="fw-bold">SMS Broadcast Gateway (TRAI DLT)</div>
+                      <small class="text-muted">Instant SMS on student morning absent roll-call and fee due dates</small>
+                    </div>
+                    <div class="form-check form-switch fs-5">
+                      <input class="form-check-input" type="checkbox" id="smsNotifToggle" checked>
+                    </div>
+                  </div>
+
+                  <div class="list-group-item d-flex justify-content-between align-items-center px-0 py-3">
+                    <div>
+                      <div class="fw-bold">Parent Mobile App Push Notifications</div>
+                      <small class="text-muted">Push homework assignments and live bus GPS alerts directly to mobile</small>
+                    </div>
+                    <div class="form-check form-switch fs-5">
+                      <input class="form-check-input" type="checkbox" id="appPushToggle" checked>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Security & Access Control -->
+          <div class="col-12 col-xl-6">
+            <div class="ed-card h-100">
+              <div class="ed-card-header">
+                <h5 class="mb-0 fw-bold"><i class="bi bi-shield-lock text-primary me-2"></i>Administrator Security & 2FA</h5>
+              </div>
+              <div class="ed-card-body">
+                <form id="securityForm" onsubmit="handleChangePassword(event)">
+                  <div class="mb-3">
+                    <label class="form-label" for="currentPass">Current Master Password</label>
+                    <input type="password" class="form-control" id="currentPass" placeholder="••••••••">
+                  </div>
+                  <div class="row g-2 mb-3">
+                    <div class="col-6">
+                      <label class="form-label" for="newPass">New Password</label>
+                      <input type="password" class="form-control" id="newPass" placeholder="New password">
+                    </div>
+                    <div class="col-6">
+                      <label class="form-label" for="confirmPass">Confirm Password</label>
+                      <input type="password" class="form-control" id="confirmPass" placeholder="Confirm password">
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center p-3 bg-light-subtle rounded border mb-3">
+                    <div>
+                      <div class="fw-bold small text-dark-emphasis">Two-Factor Authentication (2FA)</div>
+                      <small class="text-muted">Require Google Authenticator OTP code upon login</small>
+                    </div>
+                    <div class="form-check form-switch fs-5">
+                      <input class="form-check-input" type="checkbox" id="twoFaToggle" checked onchange="handle2faToggle(this)">
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-ed-outline w-100">Update Security Password</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="app-footer">
+        <div>&copy; 2026 <strong>EduManage SaaS</strong>. Delhi Public Academy.</div>
+      </footer>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    function handleSaveAllSettings() {
+      EduManage.showToast('School profile, academic terms, and notification configurations updated!', 'success', 'Settings Saved');
+    }
+
+    function handleChangePassword(e) {
+      e.preventDefault();
+      EduManage.showToast('Administrator credentials successfully updated with 256-bit encryption.', 'success', 'Password Updated');
+      document.getElementById('securityForm').reset();
+    }
+
+    function handle2faToggle(checkbox) {
+      if (checkbox.checked) {
+        EduManage.showToast('2-Factor Authentication enabled. Authenticator sync active.', 'info', '2FA Enabled');
+      } else {
+        EduManage.showToast('2-Factor Authentication disabled.', 'warning', '2FA Disabled');
+      }
+    }
+  </script>
+</body>
+</html>

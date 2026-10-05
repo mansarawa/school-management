@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examinations & Assessments - EduManage</title>
+  <meta name="description" content="School examination schedule, datesheets, and assessments for Delhi Public Academy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sidebar-overlay"></div>
+
+  <div class="app-wrapper">
+    <!-- SIDEBAR -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <a href="dashboard.html" class="sidebar-brand">
+          <div class="sidebar-brand-icon"><i class="bi bi-mortarboard-fill"></i></div>
+          <div><span class="sidebar-brand-text">EduManage</span><span class="sidebar-brand-badge">SaaS</span></div>
+        </a>
+      </div>
+
+      <div class="sidebar-menu">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a href="dashboard.html" class="nav-link-ed"><i class="bi bi-grid-1x2-fill"></i><span class="nav-text">Dashboard</span></a></li>
+          <li class="sidebar-section-title">Academic</li>
+          <li class="nav-item"><a href="students.html" class="nav-link-ed"><i class="bi bi-people-fill"></i><span class="nav-text">Students</span></a></li>
+          <li class="nav-item"><a href="teachers.html" class="nav-link-ed"><i class="bi bi-person-video3"></i><span class="nav-text">Teachers</span></a></li>
+          <li class="nav-item"><a href="classes.html" class="nav-link-ed"><i class="bi bi-building"></i><span class="nav-text">Classes</span></a></li>
+          <li class="nav-item"><a href="subjects.html" class="nav-link-ed"><i class="bi bi-book-half"></i><span class="nav-text">Subjects</span></a></li>
+          <li class="nav-item"><a href="attendance.html" class="nav-link-ed"><i class="bi bi-calendar-check-fill"></i><span class="nav-text">Attendance</span></a></li>
+          <li class="nav-item"><a href="timetable.html" class="nav-link-ed"><i class="bi bi-calendar3-week-fill"></i><span class="nav-text">Timetable</span></a></li>
+          <li class="nav-item"><a href="exams.html" class="nav-link-ed active"><i class="bi bi-journal-check"></i><span class="nav-text">Exams</span></a></li>
+          <li class="nav-item"><a href="exam-results.html" class="nav-link-ed"><i class="bi bi-trophy-fill"></i><span class="nav-text">Exam Results</span></a></li>
+          <li class="nav-item"><a href="homework.html" class="nav-link-ed"><i class="bi bi-journal-bookmark-fill"></i><span class="nav-text">Homework</span></a></li>
+          <li class="sidebar-section-title">Finance</li>
+          <li class="nav-item"><a href="fees.html" class="nav-link-ed"><i class="bi bi-cash-coin"></i><span class="nav-text">Fees</span></a></li>
+          <li class="nav-item"><a href="fee-details.html" class="nav-link-ed"><i class="bi bi-receipt"></i><span class="nav-text">Fee Invoices</span></a></li>
+          <li class="sidebar-section-title">Management</li>
+          <li class="nav-item"><a href="parents.html" class="nav-link-ed"><i class="bi bi-person-hearts"></i><span class="nav-text">Parents</span></a></li>
+          <li class="nav-item"><a href="library.html" class="nav-link-ed"><i class="bi bi-collection-fill"></i><span class="nav-text">Library</span></a></li>
+          <li class="nav-item"><a href="transport.html" class="nav-link-ed"><i class="bi bi-bus-front-fill"></i><span class="nav-text">Transport</span></a></li>
+          <li class="nav-item"><a href="notices.html" class="nav-link-ed"><i class="bi bi-megaphone-fill"></i><span class="nav-text">Notices</span></a></li>
+          <li class="nav-item"><a href="events.html" class="nav-link-ed"><i class="bi bi-calendar-event-fill"></i><span class="nav-text">Events</span></a></li>
+          <li class="nav-item"><a href="messages.html" class="nav-link-ed"><i class="bi bi-chat-dots-fill"></i><span class="nav-text">Messages</span><span class="badge bg-danger rounded-pill ms-auto">3</span></a></li>
+          <li class="sidebar-section-title">Reports</li>
+          <li class="nav-item"><a href="reports.html" class="nav-link-ed"><i class="bi bi-file-earmark-bar-graph-fill"></i><span class="nav-text">Reports</span></a></li>
+          <li class="sidebar-section-title">System</li>
+          <li class="nav-item"><a href="settings.html" class="nav-link-ed"><i class="bi bi-gear-fill"></i><span class="nav-text">Settings</span></a></li>
+          <li class="nav-item"><a href="profile.html" class="nav-link-ed"><i class="bi bi-person-circle"></i><span class="nav-text">Profile</span></a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user-card">
+          <div class="avatar-student" style="background:#4338ca;color:#fff;">RS</div>
+          <div class="user-details overflow-hidden">
+            <div class="fw-semibold text-white text-truncate small">Dr. Rajesh Sharma</div>
+            <div class="small text-muted text-truncate" style="font-size:0.75rem;">Principal / Admin</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="app-main">
+      <header class="app-topbar">
+        <div class="topbar-left">
+          <button class="btn btn-icon d-none d-lg-flex" id="sidebarToggleBtn"><i class="bi bi-list fs-5"></i></button>
+          <button class="btn btn-icon d-lg-none" id="mobileSidebarToggle"><i class="bi bi-list fs-5"></i></button>
+          <button class="topbar-search-trigger" type="button">
+            <i class="bi bi-search"></i><span>Search exams, datesheets...</span>
+            <kbd class="kbd-shortcut d-none d-md-inline-block">Ctrl K</kbd>
+          </button>
+        </div>
+        <div class="topbar-right">
+          <button class="btn btn-icon theme-toggle-btn" type="button"><i class="bi bi-moon-stars-fill"></i></button>
+          <a href="messages.html" class="btn btn-icon"><i class="bi bi-chat-dots"></i><span class="badge-dot"></span></a>
+          <div class="dropdown">
+            <button class="btn p-0 border-0 d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown">
+              <div class="avatar-student" style="background:#4338ca;color:#fff;">RS</div>
+              <div class="text-start d-none d-xl-block">
+                <div class="fw-bold small text-dark-emphasis mb-0">Dr. Rajesh Sharma</div>
+                <small class="text-muted" style="font-size:0.75rem;">Administrator</small>
+              </div>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+              <li><a class="dropdown-item py-2" href="profile.html"><i class="bi bi-person me-2"></i> My Profile</a></li>
+              <li><a class="dropdown-item py-2" href="settings.html"><i class="bi bi-gear me-2"></i> Settings</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item py-2 text-danger" href="index.html"><i class="bi bi-box-arrow-right me-2"></i> Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- PAGE CONTENT -->
+      <main class="app-content">
+        <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4">
+          <div>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-1 small">
+                <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                <li class="breadcrumb-item active">Examinations</li>
+              </ol>
+            </nav>
+            <h2 class="fw-bold mb-0">Examinations & Schedules</h2>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="exam-results.html" class="btn btn-ed-outline"><i class="bi bi-trophy"></i> Enter Results</a>
+            <button class="btn btn-ed-primary" data-bs-toggle="modal" data-bs-target="#createExamModal">
+              <i class="bi bi-plus-lg"></i> Schedule Exam
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 EXAM CARDS -->
+        <div class="row g-4">
+          <!-- Card 1: Mid Term -->
+          <div class="col-12 col-md-6">
+            <div class="ed-card h-100">
+              <div class="ed-card-header d-flex justify-content-between align-items-center bg-primary text-white">
+                <div>
+                  <h5 class="mb-0 fw-bold text-white">Mid-Term Examination 2026</h5>
+                  <small class="text-white-50">Session 2026-27 • Half Yearly Evaluation</small>
+                </div>
+                <span class="badge bg-warning text-dark fw-bold">Starts in 8 Days</span>
+              </div>
+              <div class="ed-card-body">
+                <div class="row g-3 mb-3">
+                  <div class="col-6">
+                    <span class="text-muted small d-block">Start Date:</span>
+                    <strong class="text-dark-emphasis"><i class="bi bi-calendar-event me-1 text-primary"></i>12 Oct 2026</strong>
+                  </div>
+                  <div class="col-6">
+                    <span class="text-muted small d-block">End Date:</span>
+                    <strong class="text-dark-emphasis"><i class="bi bi-calendar-check me-1 text-primary"></i>24 Oct 2026</strong>
+                  </div>
+                  <div class="col-6">
+                    <span class="text-muted small d-block">Target Grades:</span>
+                    <strong>Class 6 to Class 12</strong>
+                  </div>
+                  <div class="col-6">
+                    <span class="text-muted small d-block">Total Papers:</span>
+                    <strong>42 Question Papers</strong>
+                  </div>
+                </div>
+
+                <div class="p-3 bg-light rounded border mb-3 small">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span>Admit Cards Generated:</span>
+                    <strong class="text-success">100% Ready (840 Students)</strong>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span>Invigilators Assigned:</span>
+                    <strong>34 Faculty Members</strong>
+                  </div>
+                </div>
+
+                <div class="d-flex flex-wrap gap-2 pt-2 border-top">
+                  <button class="btn btn-sm btn-ed-primary" data-bs-toggle="modal" data-bs-target="#scheduleDatesheetModal">
+                    <i class="bi bi-calendar3"></i> View Schedule
+                  </button>
+                  <button class="btn btn-sm btn-ed-outline" onclick="EduManage.showToast('Admit cards batch PDF generated', 'info', 'Admit Cards')">
+                    <i class="bi bi-file-earmark-person"></i> Admit Cards
+                  </button>
+                  <a href="exam-results.html" class="btn btn-sm btn-ed-outline ms-auto">Enter Marks &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Pre-Board -->
+          <div class="col-12 col-md-6">
+            <div class="ed-card h-100">
+              <div class="ed-card-header d-flex justify-content-between align-items-center">
+                <div>
+                  <h5 class="mb-0 fw-bold">Pre-Board Examination (Phase 1)</h5>
+                  <small class="text-muted">Mandatory CBSE Board Preparation</small>
+                </div>
+                <span class="badge bg-info-subtle text-info fw-bold">Scheduled</span>
+              </div>
+              <div class="ed-card-body">
+                <div class="row g-3 mb-3">
+                  <div class="col-6">
+                    <span class="text-muted small d-block">Start Date:</span>
+                    <strong><i class="bi bi-calendar-event me-1 text-primary"></i>05 Dec 2026</strong>
+                  </div>
+                  <div class="col-6">
+                    <span class="text-muted small d-block">End Date:</span>
+                    <strong><i class="bi bi-calendar-check me-1 text-primary"></i>20 Dec 2026</strong>
+                  </div>
+                  <div class="col-6">
+                    <span class="text-muted small d-block">Target Grades:</span>
+                    <strong>Class 10 & Class 12</strong>
+                  </div>
+                  <div class="col-6">
+                    <span class="text-muted small d-block">Pattern:</span>
+                    <strong>3 Hour Full CBSE Pattern</strong>
+                  </div>
+                </div>
+
+                <div class="p-3 bg-light rounded border mb-3 small">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span>Datesheet Status:</span>
+                    <span class="badge bg-success-subtle text-success">Approved by Dean</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span>Syllabus Covered:</span>
+                    <strong>100% Complete</strong>
+                  </div>
+                </div>
+
+                <div class="d-flex flex-wrap gap-2 pt-2 border-top">
+                  <button class="btn btn-sm btn-ed-outline" data-bs-toggle="modal" data-bs-target="#scheduleDatesheetModal">
+                    <i class="bi bi-calendar3"></i> View Schedule
+                  </button>
+                  <button class="btn btn-sm btn-ed-outline" onclick="EduManage.showToast('Pre-Board circular emailed to Class 10 & 12 parents', 'info', 'Notice Sent')">
+                    <i class="bi bi-envelope"></i> Email Datesheet
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Unit Test 2 -->
+          <div class="col-12 col-md-6">
+            <div class="ed-card h-100">
+              <div class="ed-card-header d-flex justify-content-between align-items-center">
+                <div>
+                  <h5 class="mb-0 fw-bold">Periodic Unit Test II (UT-2)</h5>
+                  <small class="text-muted">Monthly formative evaluation (25 Marks)</small>
+                </div>
+                <span class="badge bg-secondary-subtle text-secondary fw-bold">Upcoming</span>
+              </div>
+              <div class="ed-card-body">
+                <div class="row g-3 mb-3">
+                  <div class="col-6">
+                    <span class="text-muted small d-block">Start Date:</span>
+                    <strong><i class="bi bi-calendar-event me-1 text-primary"></i>10 Nov 2026</strong>
+                  </div>
+                  <div class="col-6">
+                    <span class="text-muted small d-block">End Date:</span>
+                    <strong><i class="bi bi-calendar-check me-1 text-primary"></i>16 Nov 2026</strong>
+                  </div>
+                  <div class="col-6">
+                    <span class="text-muted small d-block">Target Grades:</span>
+                    <strong>Class 1 to Class 12</strong>
+                  </div>
+                  <div class="col-6">
+                    <span class="text-muted small d-block">Mode:</span>
+                    <strong>Classroom Written (50 mins)</strong>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-2 pt-2 border-top">
+                  <button class="btn btn-sm btn-ed-outline" data-bs-toggle="modal" data-bs-target="#scheduleDatesheetModal">
+                    <i class="bi bi-calendar3"></i> View Schedule
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Term 1 Assessment (Completed) -->
+          <div class="col-12 col-md-6">
+            <div class="ed-card h-100">
+              <div class="ed-card-header d-flex justify-content-between align-items-center">
+                <div>
+                  <h5 class="mb-0 fw-bold">Term 1 Periodic Assessment</h5>
+                  <small class="text-muted">Conducted in August 2026</small>
+                </div>
+                <span class="badge bg-success-subtle text-success fw-bold"><i class="bi bi-check2"></i> Completed</span>
+              </div>
+              <div class="ed-card-body">
+                <div class="row g-3 mb-3">
+                  <div class="col-6">
+                    <span class="text-muted small d-block">Period:</span>
+                    <strong>18 Aug - 26 Aug 2026</strong>
+                  </div>
+                  <div class="col-6">
+                    <span class="text-muted small d-block">School Average:</span>
+                    <strong class="text-success">88.4% Aggregate</strong>
+                  </div>
+                  <div class="col-6">
+                    <span class="text-muted small d-block">Target Grades:</span>
+                    <strong>Class 1 to 12</strong>
+                  </div>
+                  <div class="col-6">
+                    <span class="text-muted small d-block">Report Cards:</span>
+                    <strong class="text-primary">100% Distributed</strong>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-2 pt-2 border-top">
+                  <a href="exam-results.html" class="btn btn-sm btn-ed-primary">
+                    <i class="bi bi-trophy"></i> View Published Results
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="app-footer">
+        <div>&copy; 2026 <strong>EduManage SaaS</strong>. Delhi Public Academy.</div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- DATESHEET MODAL -->
+  <div class="modal fade" id="scheduleDatesheetModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold"><i class="bi bi-calendar3 text-primary me-2"></i>Class 10 Mid-Term Datesheet</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <table class="table table-modern mb-0">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Time Slot</th>
+                <th>Subject</th>
+                <th>Subject Code</th>
+                <th>Max Marks</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Mon, 12 Oct 2026</td><td>09:00 AM - 12:00 PM</td><td class="fw-semibold">Mathematics Standard</td><td>MATH-041</td><td>80 Marks</td></tr>
+              <tr><td>Wed, 14 Oct 2026</td><td>09:00 AM - 12:00 PM</td><td class="fw-semibold">English Lang & Lit</td><td>ENG-184</td><td>80 Marks</td></tr>
+              <tr><td>Sat, 17 Oct 2026</td><td>09:00 AM - 12:00 PM</td><td class="fw-semibold">Science & Tech</td><td>SCI-086</td><td>80 Marks</td></tr>
+              <tr><td>Tue, 20 Oct 2026</td><td>09:00 AM - 12:00 PM</td><td class="fw-semibold">Social Science</td><td>SST-087</td><td>80 Marks</td></tr>
+              <tr><td>Thu, 22 Oct 2026</td><td>09:00 AM - 12:00 PM</td><td class="fw-semibold">Hindi Course-A</td><td>HIN-002</td><td>80 Marks</td></tr>
+              <tr><td>Sat, 24 Oct 2026</td><td>09:00 AM - 11:00 AM</td><td class="fw-semibold">Computer Applications</td><td>CA-165</td><td>50 Marks</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-ed-outline" onclick="window.print()"><i class="bi bi-printer"></i> Print Datesheet</button>
+          <button type="button" class="btn btn-ed-primary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CREATE EXAM MODAL -->
+  <div class="modal fade" id="createExamModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold"><i class="bi bi-journal-plus text-primary me-2"></i>Schedule Examination</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <form onsubmit="handleCreateExam(event)">
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label" for="examTitle">Exam Title *</label>
+              <input type="text" class="form-control" id="examTitle" required placeholder="e.g. Annual Final Board 2027">
+            </div>
+            <div class="row g-2 mb-3">
+              <div class="col-6">
+                <label class="form-label" for="examStart">Start Date *</label>
+                <input type="date" class="form-control" id="examStart" required>
+              </div>
+              <div class="col-6">
+                <label class="form-label" for="examEnd">End Date *</label>
+                <input type="date" class="form-control" id="examEnd" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="examClasses">Participating Classes *</label>
+              <input type="text" class="form-control" id="examClasses" required placeholder="e.g. Class 1 to 12">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-ed-outline" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-ed-primary">Save Exam Schedule</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    function handleCreateExam(e) {
+      e.preventDefault();
+      const title = document.getElementById('examTitle').value;
+      bootstrap.Modal.getInstance(document.getElementById('createExamModal')).hide();
+      EduManage.showToast(`${title} schedule drafted and registered!`, 'success', 'Exam Scheduled');
+    }
+  </script>
+</body>
+</html>

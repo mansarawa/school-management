@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - EduManage School Management System</title>
+  <meta name="description" content="EduManage Enterprise School Management Portal for Delhi Public Academy.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .login-container {
+      min-height: 100vh;
+      display: flex;
+    }
+    .login-hero {
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 40%, #4338ca 100%);
+      color: #ffffff;
+      padding: 3.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .login-hero::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, transparent 70%);
+      top: -100px;
+      right: -100px;
+      pointer-events: none;
+    }
+    .login-hero::after {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(14, 165, 233, 0.2) 0%, transparent 70%);
+      bottom: -100px;
+      left: -100px;
+      pointer-events: none;
+    }
+    .hero-stat-pill {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      padding: 1.25rem;
+    }
+    .login-card-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem;
+      background: var(--ed-bg);
+      position: relative;
+    }
+    .login-card {
+      width: 100%;
+      max-width: 480px;
+      background: var(--ed-card-bg);
+      border: 1px solid var(--ed-card-border);
+      border-radius: var(--ed-radius-xl);
+      padding: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+    .role-btn-group .btn {
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.55rem 0.5rem;
+      border-radius: var(--ed-radius-sm);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <!-- Left Hero Column -->
+    <div class="col-lg-6 d-none d-lg-flex login-hero">
+      <div>
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <div class="sidebar-brand-icon" style="width:48px;height:48px;font-size:1.6rem;">
+            <i class="bi bi-mortarboard-fill"></i>
+          </div>
+          <div>
+            <h3 class="mb-0 text-white fw-bold tracking-tight">EduManage</h3>
+            <span class="badge bg-white text-primary fw-semibold px-2 py-1" style="font-size:0.75rem;">Delhi Public Academy</span>
+          </div>
+        </div>
+
+        <div class="mt-5 pt-3">
+          <span class="badge bg-indigo-500 bg-opacity-25 text-light border border-light border-opacity-25 px-3 py-2 rounded-pill mb-3">
+            <i class="bi bi-stars me-1 text-warning"></i> Next-Gen School SaaS v3.4
+          </span>
+          <h1 class="display-6 fw-bold text-white mb-3 leading-tight">
+            Empowering Academic Excellence & School Administration
+          </h1>
+          <p class="text-white-50 fs-6 pe-4">
+            Unified management software designed specifically for teachers, students, parents, and administrative leadership. Streamline attendance, fee collection, exam analytics, and daily operations.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature preview card -->
+      <div class="mt-4">
+        <div class="hero-stat-pill mb-4">
+          <div class="row g-3">
+            <div class="col-4 border-end border-white border-opacity-25">
+              <div class="fs-4 fw-bold text-white">1,248+</div>
+              <div class="small text-white-50">Active Students</div>
+            </div>
+            <div class="col-4 border-end border-white border-opacity-25">
+              <div class="fs-4 fw-bold text-white">99.4%</div>
+              <div class="small text-white-50">Fee Clearance</div>
+            </div>
+            <div class="col-4">
+              <div class="fs-4 fw-bold text-white">100%</div>
+              <div class="small text-white-50">CBSE Compliant</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-between text-white-50 small">
+          <span>&copy; 2026 Delhi Public Academy. All Rights Reserved.</span>
+          <span class="d-flex align-items-center gap-1"><i class="bi bi-shield-check text-success"></i> ISO 27001 Certified</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Login Column -->
+    <div class="col-12 col-lg-6 login-card-wrapper">
+      <div class="position-absolute top-0 end-0 p-4">
+        <button class="btn btn-icon theme-toggle-btn shadow-sm" type="button" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+      </div>
+
+      <div class="login-card">
+        <!-- Header for mobile -->
+        <div class="d-lg-none d-flex align-items-center gap-2 mb-4">
+          <div class="sidebar-brand-icon">
+            <i class="bi bi-mortarboard-fill"></i>
+          </div>
+          <div>
+            <h4 class="mb-0 fw-bold">EduManage</h4>
+            <small class="text-muted">Delhi Public Academy</small>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="fw-bold mb-1">Welcome back</h3>
+          <p class="text-muted small">Please choose your role or sign in with your credentials.</p>
+        </div>
+
+        <!-- Role Quick Switcher -->
+        <div class="mb-4">
+          <label class="form-label d-flex justify-content-between">
+            <span>Quick Login As</span>
+            <small class="text-primary fw-medium">Click to fill demo</small>
+          </label>
+          <div class="btn-group w-100 role-btn-group shadow-sm" role="group" aria-label="Role selector">
+            <button type="button" class="btn btn-outline-primary active" id="roleBtnAdmin" onclick="selectRole('admin')">
+              <i class="bi bi-shield-lock d-block mb-1"></i> Admin
+            </button>
+            <button type="button" class="btn btn-outline-primary" id="roleBtnTeacher" onclick="selectRole('teacher')">
+              <i class="bi bi-person-video3 d-block mb-1"></i> Teacher
+            </button>
+            <button type="button" class="btn btn-outline-primary" id="roleBtnStudent" onclick="selectRole('student')">
+              <i class="bi bi-person-badge d-block mb-1"></i> Student
+            </button>
+            <button type="button" class="btn btn-outline-primary" id="roleBtnParent" onclick="selectRole('parent')">
+              <i class="bi bi-person-hearts d-block mb-1"></i> Parent
+            </button>
+          </div>
+        </div>
+
+        <!-- Login Form -->
+        <form id="loginForm" onsubmit="handleLogin(event)">
+          <div class="mb-3">
+            <label for="usernameInput" class="form-label">Email or Username</label>
+            <div class="input-group">
+              <span class="input-group-text bg-transparent text-muted"><i class="bi bi-envelope"></i></span>
+              <input type="text" class="form-control" id="usernameInput" value="admin@dpa.edu.in" required placeholder="name@domain.com">
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <label for="passwordInput" class="form-label mb-0">Password</label>
+              <a href="#" class="small text-decoration-none" data-bs-toggle="modal" data-bs-target="#forgotModal">Forgot password?</a>
+            </div>
+            <div class="input-group">
+              <span class="input-group-text bg-transparent text-muted"><i class="bi bi-key"></i></span>
+              <input type="password" class="form-control" id="passwordInput" value="••••••••" required placeholder="Enter password">
+              <button class="btn btn-outline-secondary" type="button" onclick="togglePasswordVisibility()" aria-label="Toggle password visibility">
+                <i class="bi bi-eye" id="passwordEyeIcon"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center justify-content-between mb-4">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="rememberMeCheck" checked>
+              <label class="form-check-label small text-secondary" for="rememberMeCheck">
+                Keep me signed in
+              </label>
+            </div>
+            <span class="badge bg-success-subtle text-success border border-success-subtle px-2 py-1 small">
+              <i class="bi bi-lock-fill me-1"></i> 256-bit SSL
+            </span>
+          </div>
+
+          <button type="submit" class="btn btn-ed-primary w-100 justify-content-center py-2 fs-6 shadow">
+            Sign In to Dashboard <i class="bi bi-arrow-right"></i>
+          </button>
+        </form>
+
+        <div class="mt-4 pt-3 border-top text-center">
+          <p class="small text-muted mb-0">
+            Need help accessing your portal? <a href="#" onclick="showContactSupport(event)" class="fw-semibold text-decoration-none">Contact IT Support</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Forgot Password Modal -->
+  <div class="modal fade" id="forgotModal" tabindex="-1" aria-labelledby="forgotModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="forgotModalLabel"><i class="bi bi-key-fill text-warning me-2"></i>Reset Password</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-muted small mb-3">Enter your registered email address or admission number. We will send a secure password reset link to your email.</p>
+          <div class="mb-3">
+            <label class="form-label" for="resetEmailInput">Registered Email ID / Roll No</label>
+            <input type="text" class="form-control" id="resetEmailInput" placeholder="e.g. user@dpa.edu.in">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-ed-outline" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-ed-primary" onclick="handlePasswordReset()">Send Reset Link</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    const roleCredentials = {
+      admin: { email: 'admin@dpa.edu.in', label: 'Admin' },
+      teacher: { email: 'dr.sunita@dpa.edu.in', label: 'Teacher (Faculty)' },
+      student: { email: 'aarav.sharma@student.dpa.edu.in', label: 'Student (Class 10-A)' },
+      parent: { email: 'vijay.sharma@parents.dpa.edu.in', label: 'Parent' }
+    };
+
+    function selectRole(role) {
+      document.querySelectorAll('.role-btn-group .btn').forEach(btn => btn.classList.remove('active'));
+      const activeBtn = document.getElementById('roleBtn' + role.charAt(0).toUpperCase() + role.slice(1));
+      if (activeBtn) activeBtn.classList.add('active');
+
+      const data = roleCredentials[role];
+      if (data) {
+        document.getElementById('usernameInput').value = data.email;
+        document.getElementById('passwordInput').value = 'password123';
+        EduManage.showToast(`Loaded ${data.label} demo credentials`, 'info', 'Role Selected');
+      }
+    }
+
+    function togglePasswordVisibility() {
+      const pwd = document.getElementById('passwordInput');
+      const icon = document.getElementById('passwordEyeIcon');
+      if (pwd.type === 'password') {
+        pwd.type = 'text';
+        icon.className = 'bi bi-eye-slash';
+      } else {
+        pwd.type = 'password';
+        icon.className = 'bi bi-eye';
+      }
+    }
+
+    function handleLogin(e) {
+      e.preventDefault();
+      const username = document.getElementById('usernameInput').value;
+      EduManage.showToast('Authentication successful. Redirecting to dashboard...', 'success', 'Login Successful');
+      setTimeout(() => {
+        window.location.href = 'dashboard.html';
+      }, 700);
+    }
+
+    function handlePasswordReset() {
+      const email = document.getElementById('resetEmailInput').value.trim();
+      if (!email) {
+        alert('Please enter your email or admission ID.');
+        return;
+      }
+      const modalEl = document.getElementById('forgotModal');
+      const modal = bootstrap.Modal.getInstance(modalEl);
+      modal.hide();
+      EduManage.showToast(`Password reset link dispatched to ${email}`, 'success', 'Mail Sent');
+    }
+
+    function showContactSupport(e) {
+      e.preventDefault();
+      EduManage.showToast('IT Helpdesk Hotline: +91 11 4982 7700 or it-helpdesk@dpa.edu.in', 'info', 'IT Support');
+    }
+  </script>
+</body>
+</html>

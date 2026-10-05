@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fee Management & Collections - EduManage</title>
+  <meta name="description" content="Fee invoices, receipts, and fee collection register for Delhi Public Academy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sidebar-overlay"></div>
+
+  <div class="app-wrapper">
+    <!-- SIDEBAR -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <a href="dashboard.html" class="sidebar-brand">
+          <div class="sidebar-brand-icon"><i class="bi bi-mortarboard-fill"></i></div>
+          <div><span class="sidebar-brand-text">EduManage</span><span class="sidebar-brand-badge">SaaS</span></div>
+        </a>
+      </div>
+
+      <div class="sidebar-menu">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a href="dashboard.html" class="nav-link-ed"><i class="bi bi-grid-1x2-fill"></i><span class="nav-text">Dashboard</span></a></li>
+          <li class="sidebar-section-title">Academic</li>
+          <li class="nav-item"><a href="students.html" class="nav-link-ed"><i class="bi bi-people-fill"></i><span class="nav-text">Students</span></a></li>
+          <li class="nav-item"><a href="teachers.html" class="nav-link-ed"><i class="bi bi-person-video3"></i><span class="nav-text">Teachers</span></a></li>
+          <li class="nav-item"><a href="classes.html" class="nav-link-ed"><i class="bi bi-building"></i><span class="nav-text">Classes</span></a></li>
+          <li class="nav-item"><a href="subjects.html" class="nav-link-ed"><i class="bi bi-book-half"></i><span class="nav-text">Subjects</span></a></li>
+          <li class="nav-item"><a href="attendance.html" class="nav-link-ed"><i class="bi bi-calendar-check-fill"></i><span class="nav-text">Attendance</span></a></li>
+          <li class="nav-item"><a href="timetable.html" class="nav-link-ed"><i class="bi bi-calendar3-week-fill"></i><span class="nav-text">Timetable</span></a></li>
+          <li class="nav-item"><a href="exams.html" class="nav-link-ed"><i class="bi bi-journal-check"></i><span class="nav-text">Exams</span></a></li>
+          <li class="nav-item"><a href="exam-results.html" class="nav-link-ed"><i class="bi bi-trophy-fill"></i><span class="nav-text">Exam Results</span></a></li>
+          <li class="nav-item"><a href="homework.html" class="nav-link-ed"><i class="bi bi-journal-bookmark-fill"></i><span class="nav-text">Homework</span></a></li>
+          <li class="sidebar-section-title">Finance</li>
+          <li class="nav-item"><a href="fees.html" class="nav-link-ed active"><i class="bi bi-cash-coin"></i><span class="nav-text">Fees</span></a></li>
+          <li class="nav-item"><a href="fee-details.html" class="nav-link-ed"><i class="bi bi-receipt"></i><span class="nav-text">Fee Invoices</span></a></li>
+          <li class="sidebar-section-title">Management</li>
+          <li class="nav-item"><a href="parents.html" class="nav-link-ed"><i class="bi bi-person-hearts"></i><span class="nav-text">Parents</span></a></li>
+          <li class="nav-item"><a href="library.html" class="nav-link-ed"><i class="bi bi-collection-fill"></i><span class="nav-text">Library</span></a></li>
+          <li class="nav-item"><a href="transport.html" class="nav-link-ed"><i class="bi bi-bus-front-fill"></i><span class="nav-text">Transport</span></a></li>
+          <li class="nav-item"><a href="notices.html" class="nav-link-ed"><i class="bi bi-megaphone-fill"></i><span class="nav-text">Notices</span></a></li>
+          <li class="nav-item"><a href="events.html" class="nav-link-ed"><i class="bi bi-calendar-event-fill"></i><span class="nav-text">Events</span></a></li>
+          <li class="nav-item"><a href="messages.html" class="nav-link-ed"><i class="bi bi-chat-dots-fill"></i><span class="nav-text">Messages</span><span class="badge bg-danger rounded-pill ms-auto">3</span></a></li>
+          <li class="sidebar-section-title">Reports</li>
+          <li class="nav-item"><a href="reports.html" class="nav-link-ed"><i class="bi bi-file-earmark-bar-graph-fill"></i><span class="nav-text">Reports</span></a></li>
+          <li class="sidebar-section-title">System</li>
+          <li class="nav-item"><a href="settings.html" class="nav-link-ed"><i class="bi bi-gear-fill"></i><span class="nav-text">Settings</span></a></li>
+          <li class="nav-item"><a href="profile.html" class="nav-link-ed"><i class="bi bi-person-circle"></i><span class="nav-text">Profile</span></a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user-card">
+          <div class="avatar-student" style="background:#4338ca;color:#fff;">RS</div>
+          <div class="user-details overflow-hidden">
+            <div class="fw-semibold text-white text-truncate small">Dr. Rajesh Sharma</div>
+            <div class="small text-muted text-truncate" style="font-size:0.75rem;">Principal / Admin</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="app-main">
+      <header class="app-topbar">
+        <div class="topbar-left">
+          <button class="btn btn-icon d-none d-lg-flex" id="sidebarToggleBtn"><i class="bi bi-list fs-5"></i></button>
+          <button class="btn btn-icon d-lg-none" id="mobileSidebarToggle"><i class="bi bi-list fs-5"></i></button>
+          <button class="topbar-search-trigger" type="button">
+            <i class="bi bi-search"></i><span>Search fees, receipt no...</span>
+            <kbd class="kbd-shortcut d-none d-md-inline-block">Ctrl K</kbd>
+          </button>
+        </div>
+        <div class="topbar-right">
+          <button class="btn btn-icon theme-toggle-btn" type="button"><i class="bi bi-moon-stars-fill"></i></button>
+          <a href="messages.html" class="btn btn-icon"><i class="bi bi-chat-dots"></i><span class="badge-dot"></span></a>
+          <div class="dropdown">
+            <button class="btn p-0 border-0 d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown">
+              <div class="avatar-student" style="background:#4338ca;color:#fff;">RS</div>
+              <div class="text-start d-none d-xl-block">
+                <div class="fw-bold small text-dark-emphasis mb-0">Dr. Rajesh Sharma</div>
+                <small class="text-muted" style="font-size:0.75rem;">Administrator</small>
+              </div>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+              <li><a class="dropdown-item py-2" href="profile.html"><i class="bi bi-person me-2"></i> My Profile</a></li>
+              <li><a class="dropdown-item py-2" href="settings.html"><i class="bi bi-gear me-2"></i> Settings</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item py-2 text-danger" href="index.html"><i class="bi bi-box-arrow-right me-2"></i> Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- PAGE CONTENT -->
+      <main class="app-content">
+        <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4">
+          <div>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-1 small">
+                <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                <li class="breadcrumb-item active">Fee Management</li>
+              </ol>
+            </nav>
+            <h2 class="fw-bold mb-0">Fee Collections & Accounts</h2>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-ed-outline" onclick="EduManage.showToast('Generating financial audit report...', 'info', 'Ledger Export')">
+              <i class="bi bi-download"></i> Export Ledger
+            </button>
+            <button class="btn btn-ed-primary" data-bs-toggle="modal" data-bs-target="#collectFeeModal">
+              <i class="bi bi-cash-stack"></i> Collect Fee
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 DASHBOARD STAT CARDS -->
+        <div class="row g-3 mb-4">
+          <div class="col-6 col-lg-3">
+            <div class="stat-card">
+              <div>
+                <div class="stat-label">Total Receivables</div>
+                <div class="stat-value">₹1,48,50,000</div>
+                <div class="stat-trend text-muted bg-light">Session 2026-27</div>
+              </div>
+              <div class="stat-icon primary"><i class="bi bi-bank2"></i></div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-card">
+              <div>
+                <div class="stat-label">Total Collected</div>
+                <div class="stat-value text-success">₹1,24,85,000</div>
+                <div class="stat-trend up"><i class="bi bi-arrow-up-short"></i> 84.1% clearance</div>
+              </div>
+              <div class="stat-icon success"><i class="bi bi-check-circle-fill"></i></div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-card">
+              <div>
+                <div class="stat-label">Pending Dues</div>
+                <div class="stat-value text-warning">₹18,45,000</div>
+                <div class="stat-trend down">12.4% outstanding</div>
+              </div>
+              <div class="stat-icon warning"><i class="bi bi-hourglass-split"></i></div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-card">
+              <div>
+                <div class="stat-label">Overdue Invoices</div>
+                <div class="stat-value text-danger">₹5,20,000</div>
+                <div class="stat-trend down">3.5% defaulted</div>
+              </div>
+              <div class="stat-icon danger"><i class="bi bi-exclamation-octagon-fill"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter bar -->
+        <div class="ed-card mb-4">
+          <div class="ed-card-body p-3">
+            <div class="row g-2 align-items-center">
+              <div class="col-12 col-md-5">
+                <div class="input-group">
+                  <span class="input-group-text bg-transparent text-muted border-end-0"><i class="bi bi-search"></i></span>
+                  <input type="text" id="feeSearchInput" class="form-control border-start-0" placeholder="Search by student name or receipt #..." onkeyup="filterFeeTable()">
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <select id="feeStatusFilter" class="form-select" onchange="filterFeeTable()">
+                  <option value="">All Statuses</option>
+                  <option value="Paid">Paid</option>
+                  <option value="Pending">Pending</option>
+                  <option value="Overdue">Overdue</option>
+                </select>
+              </div>
+              <div class="col-6 col-md-4 text-md-end">
+                <button class="btn btn-sm btn-outline-secondary" onclick="sendBulkReminders()">
+                  <i class="bi bi-bell"></i> Send Due Reminders
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fee Collection Table Card -->
+        <div class="ed-card">
+          <div class="table-responsive">
+            <table class="table table-modern align-middle mb-0" id="feeTable">
+              <thead>
+                <tr>
+                  <th>Receipt No</th>
+                  <th>Student Name</th>
+                  <th>Class</th>
+                  <th>Fee Type</th>
+                  <th>Total Amount</th>
+                  <th>Paid</th>
+                  <th>Balance Due</th>
+                  <th>Payment Date</th>
+                  <th>Status</th>
+                  <th class="text-end">Action</th>
+                </tr>
+              </thead>
+              <tbody id="feeTableBody">
+                <tr>
+                  <td><span class="fw-bold text-primary">#REC-2026-8921</span></td>
+                  <td>
+                    <div class="fw-semibold"><a href="student-details.html" class="text-reset text-decoration-none">Aarav Sharma</a></div>
+                    <small class="text-muted">#DPA-1001</small>
+                  </td>
+                  <td>Class 10-A</td>
+                  <td>Quarterly Tuition + Lab</td>
+                  <td>₹45,000</td>
+                  <td class="text-success fw-bold">₹45,000</td>
+                  <td class="text-muted">₹0</td>
+                  <td>04 Oct 2026</td>
+                  <td><span class="badge-status paid">Paid</span></td>
+                  <td class="text-end">
+                    <a href="fee-details.html" class="btn btn-sm btn-light border" title="View Printable Invoice"><i class="bi bi-receipt"></i></a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><span class="fw-bold text-primary">#REC-2026-8922</span></td>
+                  <td>
+                    <div class="fw-semibold"><a href="student-details.html" class="text-reset text-decoration-none">Ananya Verma</a></div>
+                    <small class="text-muted">#DPA-1002</small>
+                  </td>
+                  <td>Class 12-B</td>
+                  <td>Term 2 Science Fee</td>
+                  <td>₹52,000</td>
+                  <td class="text-success fw-bold">₹52,000</td>
+                  <td class="text-muted">₹0</td>
+                  <td>02 Oct 2026</td>
+                  <td><span class="badge-status paid">Paid</span></td>
+                  <td class="text-end">
+                    <a href="fee-details.html" class="btn btn-sm btn-light border" title="View Printable Invoice"><i class="bi bi-receipt"></i></a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><span class="fw-bold text-primary">#REC-2026-8923</span></td>
+                  <td>
+                    <div class="fw-semibold"><a href="student-details.html" class="text-reset text-decoration-none">Rohan Mehra</a></div>
+                    <small class="text-muted">#DPA-1003</small>
+                  </td>
+                  <td>Class 9-A</td>
+                  <td>Bus Transport Fee</td>
+                  <td>₹18,500</td>
+                  <td class="text-muted">₹0</td>
+                  <td class="text-warning fw-bold">₹18,500</td>
+                  <td>Due: 15 Oct 2026</td>
+                  <td><span class="badge-status pending">Pending</span></td>
+                  <td class="text-end">
+                    <button class="btn btn-sm btn-ed-outline" onclick="openPaymentFor('Rohan Mehra', 18500)">Collect</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><span class="fw-bold text-primary">#REC-2026-8924</span></td>
+                  <td>
+                    <div class="fw-semibold"><a href="student-details.html" class="text-reset text-decoration-none">Kabir Khan</a></div>
+                    <small class="text-muted">#DPA-1005</small>
+                  </td>
+                  <td>Class 8-B</td>
+                  <td>Quarterly Tuition</td>
+                  <td>₹36,000</td>
+                  <td class="text-muted">₹0</td>
+                  <td class="text-danger fw-bold">₹36,000</td>
+                  <td>Due: 15 Sep 2026</td>
+                  <td><span class="badge-status overdue">Overdue</span></td>
+                  <td class="text-end">
+                    <button class="btn btn-sm btn-outline-danger" onclick="sendWarningSMS('Kabir Khan')">Remind SMS</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><span class="fw-bold text-primary">#REC-2026-8925</span></td>
+                  <td>
+                    <div class="fw-semibold"><a href="student-details.html" class="text-reset text-decoration-none">Tanvi Gupta</a></div>
+                    <small class="text-muted">#DPA-1004</small>
+                  </td>
+                  <td>Class 11-C</td>
+                  <td>Commerce Annual Fee</td>
+                  <td>₹48,000</td>
+                  <td class="text-success fw-bold">₹24,000</td>
+                  <td class="text-warning fw-bold">₹24,000</td>
+                  <td>01 Oct 2026</td>
+                  <td><span class="badge-status pending">Partial</span></td>
+                  <td class="text-end">
+                    <button class="btn btn-sm btn-ed-outline" onclick="openPaymentFor('Tanvi Gupta', 24000)">Collect</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+
+      <footer class="app-footer">
+        <div>&copy; 2026 <strong>EduManage SaaS</strong>. Delhi Public Academy.</div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- COLLECT FEE PAYMENT MODAL -->
+  <div class="modal fade" id="collectFeeModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold"><i class="bi bi-cash-stack text-success me-2"></i>Record Fee Collection</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <form onsubmit="handleRecordPayment(event)">
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label" for="payStudent">Select Student *</label>
+              <select class="form-select" id="payStudent" required>
+                <option value="Aarav Sharma (Class 10-A)">Aarav Sharma (Class 10-A, #1001)</option>
+                <option value="Rohan Mehra (Class 9-A)">Rohan Mehra (Class 9-A, #1003)</option>
+                <option value="Kabir Khan (Class 8-B)">Kabir Khan (Class 8-B, #1005)</option>
+                <option value="Tanvi Gupta (Class 11-C)">Tanvi Gupta (Class 11-C, #1004)</option>
+              </select>
+            </div>
+            <div class="row g-2 mb-3">
+              <div class="col-6">
+                <label class="form-label" for="payType">Fee Type</label>
+                <select class="form-select" id="payType">
+                  <option value="Tuition Fee">Tuition Fee</option>
+                  <option value="Transport Fee">Transport Fee</option>
+                  <option value="Examination Fee">Examination Fee</option>
+                  <option value="Annual Lab Charges">Annual Lab Charges</option>
+                </select>
+              </div>
+              <div class="col-6">
+                <label class="form-label" for="payAmount">Amount (₹) *</label>
+                <input type="number" class="form-control" id="payAmount" required value="18500">
+              </div>
+            </div>
+            <div class="row g-2 mb-3">
+              <div class="col-6">
+                <label class="form-label" for="payMode">Payment Method *</label>
+                <select class="form-select" id="payMode" required>
+                  <option value="UPI">UPI / QR Code</option>
+                  <option value="Cash">Cash</option>
+                  <option value="Credit / Debit Card">Credit / Debit Card</option>
+                  <option value="Net Banking">Net Banking</option>
+                  <option value="Cheque">Cheque</option>
+                </select>
+              </div>
+              <div class="col-6">
+                <label class="form-label" for="payDate">Payment Date *</label>
+                <input type="date" class="form-control" id="payDate" required value="2026-10-04">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="payTxn">Transaction ID / Cheque Ref No</label>
+              <input type="text" class="form-control" id="payTxn" placeholder="e.g. UPI-2026-981293847">
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="payRemark">Remarks</label>
+              <input type="text" class="form-control" id="payRemark" placeholder="e.g. Received full term fee">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-ed-outline" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-ed-primary"><i class="bi bi-check2"></i> Record Payment</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    function filterFeeTable() {
+      const q = document.getElementById('feeSearchInput').value.toLowerCase();
+      const stat = document.getElementById('feeStatusFilter').value.toLowerCase();
+      const rows = document.querySelectorAll('#feeTableBody tr');
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        const matchesQ = text.includes(q);
+        const matchesStat = !stat || row.children[8].innerText.toLowerCase().includes(stat);
+        row.style.display = (matchesQ && matchesStat) ? '' : 'none';
+      });
+    }
+
+    function handleRecordPayment(e) {
+      e.preventDefault();
+      const student = document.getElementById('payStudent').value;
+      const amt = document.getElementById('payAmount').value;
+      const type = document.getElementById('payType').value;
+      const mode = document.getElementById('payMode').value;
+      const receiptNo = '#REC-2026-' + Math.floor(1000 + Math.random() * 9000);
+
+      const tbody = document.getElementById('feeTableBody');
+      const newRow = document.createElement('tr');
+      newRow.innerHTML = `
+        <td><span class="fw-bold text-primary">${receiptNo}</span></td>
+        <td>
+          <div class="fw-semibold">${student}</div>
+          <small class="text-muted">Direct Counter Payment</small>
+        </td>
+        <td>Enrolled</td>
+        <td>${type}</td>
+        <td>₹${parseInt(amt).toLocaleString('en-IN')}</td>
+        <td class="text-success fw-bold">₹${parseInt(amt).toLocaleString('en-IN')}</td>
+        <td class="text-muted">₹0</td>
+        <td>Today (${mode})</td>
+        <td><span class="badge-status paid">Paid</span></td>
+        <td class="text-end">
+          <a href="fee-details.html" class="btn btn-sm btn-light border"><i class="bi bi-receipt"></i></a>
+        </td>
+      `;
+      tbody.prepend(newRow);
+      bootstrap.Modal.getInstance(document.getElementById('collectFeeModal')).hide();
+      EduManage.showToast(`₹${parseInt(amt).toLocaleString('en-IN')} received via ${mode}. Receipt ${receiptNo} issued!`, 'success', 'Fee Collected');
+    }
+
+    function openPaymentFor(student, amt) {
+      document.getElementById('payAmount').value = amt;
+      const modal = new bootstrap.Modal(document.getElementById('collectFeeModal'));
+      modal.show();
+    }
+
+    function sendWarningSMS(student) {
+      EduManage.showToast(`Overdue fee notice SMS sent to registered guardian of ${student}.`, 'info', 'SMS Sent');
+    }
+
+    function sendBulkReminders() {
+      EduManage.showToast('Fee reminder notifications pushed to 42 parents with pending dues.', 'info', 'Bulk Reminder');
+    }
+  </script>
+</body>
+</html>

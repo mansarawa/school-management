@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework & Assignments - EduManage</title>
+  <meta name="description" content="Homework distribution, submissions, and assignment grading for Delhi Public Academy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sidebar-overlay"></div>
+
+  <div class="app-wrapper">
+    <!-- SIDEBAR -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <a href="dashboard.html" class="sidebar-brand">
+          <div class="sidebar-brand-icon"><i class="bi bi-mortarboard-fill"></i></div>
+          <div><span class="sidebar-brand-text">EduManage</span><span class="sidebar-brand-badge">SaaS</span></div>
+        </a>
+      </div>
+
+      <div class="sidebar-menu">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a href="dashboard.html" class="nav-link-ed"><i class="bi bi-grid-1x2-fill"></i><span class="nav-text">Dashboard</span></a></li>
+          <li class="sidebar-section-title">Academic</li>
+          <li class="nav-item"><a href="students.html" class="nav-link-ed"><i class="bi bi-people-fill"></i><span class="nav-text">Students</span></a></li>
+          <li class="nav-item"><a href="teachers.html" class="nav-link-ed"><i class="bi bi-person-video3"></i><span class="nav-text">Teachers</span></a></li>
+          <li class="nav-item"><a href="classes.html" class="nav-link-ed"><i class="bi bi-building"></i><span class="nav-text">Classes</span></a></li>
+          <li class="nav-item"><a href="subjects.html" class="nav-link-ed"><i class="bi bi-book-half"></i><span class="nav-text">Subjects</span></a></li>
+          <li class="nav-item"><a href="attendance.html" class="nav-link-ed"><i class="bi bi-calendar-check-fill"></i><span class="nav-text">Attendance</span></a></li>
+          <li class="nav-item"><a href="timetable.html" class="nav-link-ed"><i class="bi bi-calendar3-week-fill"></i><span class="nav-text">Timetable</span></a></li>
+          <li class="nav-item"><a href="exams.html" class="nav-link-ed"><i class="bi bi-journal-check"></i><span class="nav-text">Exams</span></a></li>
+          <li class="nav-item"><a href="exam-results.html" class="nav-link-ed"><i class="bi bi-trophy-fill"></i><span class="nav-text">Exam Results</span></a></li>
+          <li class="nav-item"><a href="homework.html" class="nav-link-ed active"><i class="bi bi-journal-bookmark-fill"></i><span class="nav-text">Homework</span></a></li>
+          <li class="sidebar-section-title">Finance</li>
+          <li class="nav-item"><a href="fees.html" class="nav-link-ed"><i class="bi bi-cash-coin"></i><span class="nav-text">Fees</span></a></li>
+          <li class="nav-item"><a href="fee-details.html" class="nav-link-ed"><i class="bi bi-receipt"></i><span class="nav-text">Fee Invoices</span></a></li>
+          <li class="sidebar-section-title">Management</li>
+          <li class="nav-item"><a href="parents.html" class="nav-link-ed"><i class="bi bi-person-hearts"></i><span class="nav-text">Parents</span></a></li>
+          <li class="nav-item"><a href="library.html" class="nav-link-ed"><i class="bi bi-collection-fill"></i><span class="nav-text">Library</span></a></li>
+          <li class="nav-item"><a href="transport.html" class="nav-link-ed"><i class="bi bi-bus-front-fill"></i><span class="nav-text">Transport</span></a></li>
+          <li class="nav-item"><a href="notices.html" class="nav-link-ed"><i class="bi bi-megaphone-fill"></i><span class="nav-text">Notices</span></a></li>
+          <li class="nav-item"><a href="events.html" class="nav-link-ed"><i class="bi bi-calendar-event-fill"></i><span class="nav-text">Events</span></a></li>
+          <li class="nav-item"><a href="messages.html" class="nav-link-ed"><i class="bi bi-chat-dots-fill"></i><span class="nav-text">Messages</span><span class="badge bg-danger rounded-pill ms-auto">3</span></a></li>
+          <li class="sidebar-section-title">Reports</li>
+          <li class="nav-item"><a href="reports.html" class="nav-link-ed"><i class="bi bi-file-earmark-bar-graph-fill"></i><span class="nav-text">Reports</span></a></li>
+          <li class="sidebar-section-title">System</li>
+          <li class="nav-item"><a href="settings.html" class="nav-link-ed"><i class="bi bi-gear-fill"></i><span class="nav-text">Settings</span></a></li>
+          <li class="nav-item"><a href="profile.html" class="nav-link-ed"><i class="bi bi-person-circle"></i><span class="nav-text">Profile</span></a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user-card">
+          <div class="avatar-student" style="background:#4338ca;color:#fff;">RS</div>
+          <div class="user-details overflow-hidden">
+            <div class="fw-semibold text-white text-truncate small">Dr. Rajesh Sharma</div>
+            <div class="small text-muted text-truncate" style="font-size:0.75rem;">Principal / Admin</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="app-main">
+      <header class="app-topbar">
+        <div class="topbar-left">
+          <button class="btn btn-icon d-none d-lg-flex" id="sidebarToggleBtn"><i class="bi bi-list fs-5"></i></button>
+          <button class="btn btn-icon d-lg-none" id="mobileSidebarToggle"><i class="bi bi-list fs-5"></i></button>
+          <button class="topbar-search-trigger" type="button">
+            <i class="bi bi-search"></i><span>Search homework, subjects...</span>
+            <kbd class="kbd-shortcut d-none d-md-inline-block">Ctrl K</kbd>
+          </button>
+        </div>
+        <div class="topbar-right">
+          <button class="btn btn-icon theme-toggle-btn" type="button"><i class="bi bi-moon-stars-fill"></i></button>
+          <a href="messages.html" class="btn btn-icon"><i class="bi bi-chat-dots"></i><span class="badge-dot"></span></a>
+          <div class="dropdown">
+            <button class="btn p-0 border-0 d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown">
+              <div class="avatar-student" style="background:#4338ca;color:#fff;">RS</div>
+              <div class="text-start d-none d-xl-block">
+                <div class="fw-bold small text-dark-emphasis mb-0">Dr. Rajesh Sharma</div>
+                <small class="text-muted" style="font-size:0.75rem;">Administrator</small>
+              </div>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+              <li><a class="dropdown-item py-2" href="profile.html"><i class="bi bi-person me-2"></i> My Profile</a></li>
+              <li><a class="dropdown-item py-2" href="settings.html"><i class="bi bi-gear me-2"></i> Settings</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item py-2 text-danger" href="index.html"><i class="bi bi-box-arrow-right me-2"></i> Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- PAGE CONTENT -->
+      <main class="app-content">
+        <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4">
+          <div>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-1 small">
+                <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                <li class="breadcrumb-item active">Homework</li>
+              </ol>
+            </nav>
+            <h2 class="fw-bold mb-0">Homework & Assignments</h2>
+          </div>
+          <button class="btn btn-ed-primary" data-bs-toggle="modal" data-bs-target="#addHomeworkModal">
+            <i class="bi bi-plus-lg"></i> + Add Homework
+          </button>
+        </div>
+
+        <!-- Filter bar -->
+        <div class="ed-card mb-4">
+          <div class="ed-card-body p-3">
+            <div class="row g-2 align-items-center">
+              <div class="col-12 col-md-5">
+                <div class="input-group">
+                  <span class="input-group-text bg-transparent text-muted border-end-0"><i class="bi bi-search"></i></span>
+                  <input type="text" id="hwSearchInput" class="form-control border-start-0" placeholder="Search assignments..." onkeyup="filterHw()">
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <select id="hwClassFilter" class="form-select" onchange="filterHw()">
+                  <option value="">All Classes</option>
+                  <option value="Class 10">Class 10</option>
+                  <option value="Class 12">Class 12</option>
+                  <option value="Class 9">Class 9</option>
+                  <option value="Class 8">Class 8</option>
+                </select>
+              </div>
+              <div class="col-6 col-md-4 text-md-end">
+                <span class="small text-muted">Active Assignments: <strong>14 Due This Week</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Homework Grid -->
+        <div class="row g-4" id="hwContainer">
+          <!-- Card 1 -->
+          <div class="col-12 col-lg-6 hw-item">
+            <div class="ed-card h-100 p-4">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="badge bg-indigo-subtle border" style="background:#e0e7ff;color:#4338ca;">Mathematics • Class 10-A</span>
+                <span class="badge-status active">Due in 2 Days</span>
+              </div>
+              <h5 class="fw-bold mb-2">Quadratic Equations Practice Set 4.2</h5>
+              <p class="text-muted small mb-3">
+                Solve exercises 1 to 10 from NCERT Chapter 4. Ensure complete quadratic formula steps and discriminant analysis are shown in homework notebook.
+              </p>
+              <div class="row g-2 small text-muted mb-3 p-2 bg-light-subtle rounded border">
+                <div class="col-6"><strong>Assigned:</strong> 02 Oct 2026</div>
+                <div class="col-6 text-danger"><strong>Due Date:</strong> 06 Oct 2026</div>
+                <div class="col-6"><strong>Teacher:</strong> Dr. Sunita Kapoor</div>
+                <div class="col-6 text-success"><strong>Submissions:</strong> 38 / 42 Turned in</div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                <button class="btn btn-sm btn-light border" onclick="EduManage.showToast('Downloading Worksheet_4.2.pdf', 'info', 'Download')">
+                  <i class="bi bi-paperclip me-1"></i> Worksheet.pdf (420 KB)
+                </button>
+                <button class="btn btn-sm btn-ed-primary" onclick="EduManage.showToast('Viewing 38 student submissions', 'info', 'Submissions')">
+                  Review Submissions
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-12 col-lg-6 hw-item">
+            <div class="ed-card h-100 p-4">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="badge bg-success-subtle text-success border">Science • Class 10-B</span>
+                <span class="badge-status pending">Due Tomorrow</span>
+              </div>
+              <h5 class="fw-bold mb-2">Electromagnetic Induction Lab Record</h5>
+              <p class="text-muted small mb-3">
+                Complete the laboratory manual record for Fleming's Right-Hand rule and AC generator working principle with labeled ray diagrams.
+              </p>
+              <div class="row g-2 small text-muted mb-3 p-2 bg-light-subtle rounded border">
+                <div class="col-6"><strong>Assigned:</strong> 01 Oct 2026</div>
+                <div class="col-6 text-danger"><strong>Due Date:</strong> 05 Oct 2026</div>
+                <div class="col-6"><strong>Teacher:</strong> Mr. Rajesh Nair</div>
+                <div class="col-6 text-success"><strong>Submissions:</strong> 40 / 41 Turned in</div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                <button class="btn btn-sm btn-light border" onclick="EduManage.showToast('Downloading Lab_Manual_Exp6.pdf', 'info', 'Download')">
+                  <i class="bi bi-paperclip me-1"></i> LabManual_6.pdf (1.1 MB)
+                </button>
+                <button class="btn btn-sm btn-ed-primary" onclick="EduManage.showToast('Viewing 40 student submissions', 'info', 'Submissions')">
+                  Review Submissions
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-12 col-lg-6 hw-item">
+            <div class="ed-card h-100 p-4">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="badge bg-info-subtle text-info border">English • Class 9-A</span>
+                <span class="badge-status active">Active Assignment</span>
+              </div>
+              <h5 class="fw-bold mb-2">Essay: Sustainable Urban Development in India</h5>
+              <p class="text-muted small mb-3">
+                Write a 350-word persuasive essay discussing solar energy adoption and waste management solutions for metropolitan cities.
+              </p>
+              <div class="row g-2 small text-muted mb-3 p-2 bg-light-subtle rounded border">
+                <div class="col-6"><strong>Assigned:</strong> 03 Oct 2026</div>
+                <div class="col-6 text-danger"><strong>Due Date:</strong> 08 Oct 2026</div>
+                <div class="col-6"><strong>Teacher:</strong> Mrs. Pooja Sharma</div>
+                <div class="col-6 text-warning"><strong>Submissions:</strong> 18 / 40 Turned in</div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                <span class="text-muted small"><i class="bi bi-chat-left-dots me-1"></i>2 Questions Attached</span>
+                <button class="btn btn-sm btn-ed-primary" onclick="EduManage.showToast('Viewing 18 student submissions', 'info', 'Submissions')">
+                  Review Submissions
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-12 col-lg-6 hw-item">
+            <div class="ed-card h-100 p-4">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="badge bg-warning-subtle text-warning border">Computer Science • Class 11-A</span>
+                <span class="badge-status active">Active Assignment</span>
+              </div>
+              <h5 class="fw-bold mb-2">Python Function Modules & Recursion</h5>
+              <p class="text-muted small mb-3">
+                Implement recursive algorithms for Fibonacci series and binary search. Submit .py script file on portal.
+              </p>
+              <div class="row g-2 small text-muted mb-3 p-2 bg-light-subtle rounded border">
+                <div class="col-6"><strong>Assigned:</strong> 04 Oct 2026</div>
+                <div class="col-6 text-danger"><strong>Due Date:</strong> 09 Oct 2026</div>
+                <div class="col-6"><strong>Teacher:</strong> Mr. Vikas Malhotra</div>
+                <div class="col-6 text-warning"><strong>Submissions:</strong> 12 / 36 Turned in</div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                <button class="btn btn-sm btn-light border" onclick="EduManage.showToast('Downloading Python_Starter.py', 'info', 'Download')">
+                  <i class="bi bi-file-code me-1"></i> Starter_Code.py
+                </button>
+                <button class="btn btn-sm btn-ed-primary" onclick="EduManage.showToast('Viewing 12 student submissions', 'info', 'Submissions')">
+                  Review Submissions
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="app-footer">
+        <div>&copy; 2026 <strong>EduManage SaaS</strong>. Delhi Public Academy.</div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- ADD HOMEWORK MODAL -->
+  <div class="modal fade" id="addHomeworkModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold"><i class="bi bi-journal-plus text-primary me-2"></i>Assign Homework</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <form onsubmit="handleSaveHomework(event)">
+          <div class="modal-body">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label" for="hwClassInput">Class & Section *</label>
+                <select class="form-select" id="hwClassInput" required>
+                  <option value="Class 10-A">Class 10-A</option>
+                  <option value="Class 10-B">Class 10-B</option>
+                  <option value="Class 12-A">Class 12-A</option>
+                  <option value="Class 9-A">Class 9-A</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="hwSubjectInput">Subject *</label>
+                <select class="form-select" id="hwSubjectInput" required>
+                  <option value="Mathematics">Mathematics</option>
+                  <option value="Science">Science</option>
+                  <option value="English">English</option>
+                  <option value="Computer Science">Computer Science</option>
+                  <option value="Social Studies">Social Studies</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="hwTitleInput">Homework Title *</label>
+                <input type="text" class="form-control" id="hwTitleInput" required placeholder="e.g. Chapter 6 Triangles Similarity Theorems">
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="hwDescInput">Instructions / Description *</label>
+                <textarea class="form-control" id="hwDescInput" rows="3" required placeholder="Write detailed instructions for students..."></textarea>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="hwDueDateInput">Submission Due Date *</label>
+                <input type="date" class="form-control" id="hwDueDateInput" required value="2026-10-10">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="hwAttachInput">Attachment Worksheet (PDF / DOC)</label>
+                <input type="file" class="form-control" id="hwAttachInput">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-ed-outline" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-ed-primary">Publish Homework</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    function filterHw() {
+      const q = document.getElementById('hwSearchInput').value.toLowerCase();
+      const cls = document.getElementById('hwClassFilter').value.toLowerCase();
+      const items = document.querySelectorAll('.hw-item');
+      items.forEach(item => {
+        const text = item.innerText.toLowerCase();
+        const matchesQ = text.includes(q);
+        const matchesCls = !cls || text.includes(cls);
+        item.style.display = (matchesQ && matchesCls) ? '' : 'none';
+      });
+    }
+
+    function handleSaveHomework(e) {
+      e.preventDefault();
+      const title = document.getElementById('hwTitleInput').value;
+      const cls = document.getElementById('hwClassInput').value;
+      const subj = document.getElementById('hwSubjectInput').value;
+      const due = document.getElementById('hwDueDateInput').value;
+      const desc = document.getElementById('hwDescInput').value;
+
+      const container = document.getElementById('hwContainer');
+      const div = document.createElement('div');
+      div.className = 'col-12 col-lg-6 hw-item';
+      div.innerHTML = `
+        <div class="ed-card h-100 p-4">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <span class="badge bg-indigo-subtle border" style="background:#e0e7ff;color:#4338ca;">${subj} • ${cls}</span>
+            <span class="badge-status active">Newly Assigned</span>
+          </div>
+          <h5 class="fw-bold mb-2">${title}</h5>
+          <p class="text-muted small mb-3">${desc}</p>
+          <div class="row g-2 small text-muted mb-3 p-2 bg-light-subtle rounded border">
+            <div class="col-6"><strong>Assigned:</strong> Today</div>
+            <div class="col-6 text-danger"><strong>Due Date:</strong> ${due}</div>
+            <div class="col-6"><strong>Teacher:</strong> Faculty</div>
+            <div class="col-6 text-muted"><strong>Submissions:</strong> 0 / 42 Turned in</div>
+          </div>
+          <div class="d-flex justify-content-end pt-2 border-top">
+            <button class="btn btn-sm btn-ed-primary" onclick="EduManage.showToast('Submissions tracker opened', 'info', 'Submissions')">Review Submissions</button>
+          </div>
+        </div>
+      `;
+      container.prepend(div);
+      bootstrap.Modal.getInstance(document.getElementById('addHomeworkModal')).hide();
+      EduManage.showToast(`Homework "${title}" published for ${cls}! Notification alert pushed to student app.`, 'success', 'Homework Assigned');
+    }
+  </script>
+</body>
+</html>

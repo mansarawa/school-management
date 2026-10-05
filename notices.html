@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notices & Circulars - EduManage</title>
+  <meta name="description" content="Digital circulars, administrative notices, and announcements for Delhi Public Academy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sidebar-overlay"></div>
+
+  <div class="app-wrapper">
+    <!-- SIDEBAR -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <a href="dashboard.html" class="sidebar-brand">
+          <div class="sidebar-brand-icon"><i class="bi bi-mortarboard-fill"></i></div>
+          <div><span class="sidebar-brand-text">EduManage</span><span class="sidebar-brand-badge">SaaS</span></div>
+        </a>
+      </div>
+
+      <div class="sidebar-menu">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a href="dashboard.html" class="nav-link-ed"><i class="bi bi-grid-1x2-fill"></i><span class="nav-text">Dashboard</span></a></li>
+          <li class="sidebar-section-title">Academic</li>
+          <li class="nav-item"><a href="students.html" class="nav-link-ed"><i class="bi bi-people-fill"></i><span class="nav-text">Students</span></a></li>
+          <li class="nav-item"><a href="teachers.html" class="nav-link-ed"><i class="bi bi-person-video3"></i><span class="nav-text">Teachers</span></a></li>
+          <li class="nav-item"><a href="classes.html" class="nav-link-ed"><i class="bi bi-building"></i><span class="nav-text">Classes</span></a></li>
+          <li class="nav-item"><a href="subjects.html" class="nav-link-ed"><i class="bi bi-book-half"></i><span class="nav-text">Subjects</span></a></li>
+          <li class="nav-item"><a href="attendance.html" class="nav-link-ed"><i class="bi bi-calendar-check-fill"></i><span class="nav-text">Attendance</span></a></li>
+          <li class="nav-item"><a href="timetable.html" class="nav-link-ed"><i class="bi bi-calendar3-week-fill"></i><span class="nav-text">Timetable</span></a></li>
+          <li class="nav-item"><a href="exams.html" class="nav-link-ed"><i class="bi bi-journal-check"></i><span class="nav-text">Exams</span></a></li>
+          <li class="nav-item"><a href="exam-results.html" class="nav-link-ed"><i class="bi bi-trophy-fill"></i><span class="nav-text">Exam Results</span></a></li>
+          <li class="nav-item"><a href="homework.html" class="nav-link-ed"><i class="bi bi-journal-bookmark-fill"></i><span class="nav-text">Homework</span></a></li>
+          <li class="sidebar-section-title">Finance</li>
+          <li class="nav-item"><a href="fees.html" class="nav-link-ed"><i class="bi bi-cash-coin"></i><span class="nav-text">Fees</span></a></li>
+          <li class="nav-item"><a href="fee-details.html" class="nav-link-ed"><i class="bi bi-receipt"></i><span class="nav-text">Fee Invoices</span></a></li>
+          <li class="sidebar-section-title">Management</li>
+          <li class="nav-item"><a href="parents.html" class="nav-link-ed"><i class="bi bi-person-hearts"></i><span class="nav-text">Parents</span></a></li>
+          <li class="nav-item"><a href="library.html" class="nav-link-ed"><i class="bi bi-collection-fill"></i><span class="nav-text">Library</span></a></li>
+          <li class="nav-item"><a href="transport.html" class="nav-link-ed"><i class="bi bi-bus-front-fill"></i><span class="nav-text">Transport</span></a></li>
+          <li class="nav-item"><a href="notices.html" class="nav-link-ed active"><i class="bi bi-megaphone-fill"></i><span class="nav-text">Notices</span></a></li>
+          <li class="nav-item"><a href="events.html" class="nav-link-ed"><i class="bi bi-calendar-event-fill"></i><span class="nav-text">Events</span></a></li>
+          <li class="nav-item"><a href="messages.html" class="nav-link-ed"><i class="bi bi-chat-dots-fill"></i><span class="nav-text">Messages</span><span class="badge bg-danger rounded-pill ms-auto">3</span></a></li>
+          <li class="sidebar-section-title">Reports</li>
+          <li class="nav-item"><a href="reports.html" class="nav-link-ed"><i class="bi bi-file-earmark-bar-graph-fill"></i><span class="nav-text">Reports</span></a></li>
+          <li class="sidebar-section-title">System</li>
+          <li class="nav-item"><a href="settings.html" class="nav-link-ed"><i class="bi bi-gear-fill"></i><span class="nav-text">Settings</span></a></li>
+          <li class="nav-item"><a href="profile.html" class="nav-link-ed"><i class="bi bi-person-circle"></i><span class="nav-text">Profile</span></a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user-card">
+          <div class="avatar-student" style="background:#4338ca;color:#fff;">RS</div>
+          <div class="user-details overflow-hidden">
+            <div class="fw-semibold text-white text-truncate small">Dr. Rajesh Sharma</div>
+            <div class="small text-muted text-truncate" style="font-size:0.75rem;">Principal / Admin</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="app-main">
+      <header class="app-topbar">
+        <div class="topbar-left">
+          <button class="btn btn-icon d-none d-lg-flex" id="sidebarToggleBtn"><i class="bi bi-list fs-5"></i></button>
+          <button class="btn btn-icon d-lg-none" id="mobileSidebarToggle"><i class="bi bi-list fs-5"></i></button>
+          <button class="topbar-search-trigger" type="button">
+            <i class="bi bi-search"></i><span>Search circulars, notices...</span>
+            <kbd class="kbd-shortcut d-none d-md-inline-block">Ctrl K</kbd>
+          </button>
+        </div>
+        <div class="topbar-right">
+          <button class="btn btn-icon theme-toggle-btn" type="button"><i class="bi bi-moon-stars-fill"></i></button>
+          <a href="messages.html" class="btn btn-icon"><i class="bi bi-chat-dots"></i><span class="badge-dot"></span></a>
+          <div class="dropdown">
+            <button class="btn p-0 border-0 d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown">
+              <div class="avatar-student" style="background:#4338ca;color:#fff;">RS</div>
+              <div class="text-start d-none d-xl-block">
+                <div class="fw-bold small text-dark-emphasis mb-0">Dr. Rajesh Sharma</div>
+                <small class="text-muted" style="font-size:0.75rem;">Administrator</small>
+              </div>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+              <li><a class="dropdown-item py-2" href="profile.html"><i class="bi bi-person me-2"></i> My Profile</a></li>
+              <li><a class="dropdown-item py-2" href="settings.html"><i class="bi bi-gear me-2"></i> Settings</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item py-2 text-danger" href="index.html"><i class="bi bi-box-arrow-right me-2"></i> Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- PAGE CONTENT -->
+      <main class="app-content">
+        <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4">
+          <div>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-1 small">
+                <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                <li class="breadcrumb-item active">Notices & Circulars</li>
+              </ol>
+            </nav>
+            <h2 class="fw-bold mb-0">Notice Board & Circulars</h2>
+          </div>
+          <button class="btn btn-ed-primary" data-bs-toggle="modal" data-bs-target="#publishNoticeModal">
+            <i class="bi bi-megaphone"></i> Publish Notice
+          </button>
+        </div>
+
+        <!-- Filter bar -->
+        <div class="ed-card mb-4">
+          <div class="ed-card-body p-3">
+            <div class="row g-2 align-items-center">
+              <div class="col-12 col-md-5">
+                <div class="input-group">
+                  <span class="input-group-text bg-transparent text-muted border-end-0"><i class="bi bi-search"></i></span>
+                  <input type="text" id="noticeSearchInput" class="form-control border-start-0" placeholder="Search circulars..." onkeyup="filterNotices()">
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <select id="audienceFilter" class="form-select" onchange="filterNotices()">
+                  <option value="">All Audiences</option>
+                  <option value="All">All School</option>
+                  <option value="Parents">Parents Only</option>
+                  <option value="Teachers">Teachers / Faculty</option>
+                  <option value="Students">Students Only</option>
+                </select>
+              </div>
+              <div class="col-6 col-md-4 text-md-end">
+                <span class="small text-muted">Official Circulars: <strong>Active for AY 2026-27</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NOTICES GRID -->
+        <div class="row g-4" id="noticesContainer">
+          <!-- Notice 1 -->
+          <div class="col-12 col-lg-6 notice-card-item">
+            <div class="ed-card h-100 p-4">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="badge bg-primary-subtle text-primary border">Audience: All</span>
+                <span class="badge bg-danger text-white">High Priority</span>
+              </div>
+              <h5 class="fw-bold mb-2">Annual Sports Meet 2026: Parent & Student Guidelines</h5>
+              <p class="text-muted small mb-3">
+                The Annual Sports Meet will be hosted on Saturday, 12th October 2026. All students must report in house sportswear by 08:00 AM sharp. Parents are cordially invited to the grand opening march past.
+              </p>
+              <div class="d-flex justify-content-between align-items-center small text-muted pt-3 border-top">
+                <div>
+                  <i class="bi bi-person-circle me-1 text-primary"></i><strong>Dr. Rajesh Sharma</strong> (Principal)
+                  <span class="d-block text-secondary opacity-75">Published: 03 Oct 2026</span>
+                </div>
+                <button class="btn btn-sm btn-light border" onclick="EduManage.showToast('Downloading Sports_Circular_2026.pdf', 'info', 'Download')">
+                  <i class="bi bi-download me-1"></i> Circular.pdf
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notice 2 -->
+          <div class="col-12 col-lg-6 notice-card-item">
+            <div class="ed-card h-100 p-4">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="badge bg-warning-subtle text-dark border">Audience: Parents</span>
+                <span class="badge-status active">General Notice</span>
+              </div>
+              <h5 class="fw-bold mb-2">Parent-Teacher Meeting (PTM) Schedule for Classes 9 to 12</h5>
+              <p class="text-muted small mb-3">
+                Mandatory PTM to discuss Mid-Term evaluation progress and board preparation strategy will be conducted on 18th October from 09:00 AM to 01:00 PM. Roll-wise slots have been sent via SMS.
+              </p>
+              <div class="d-flex justify-content-between align-items-center small text-muted pt-3 border-top">
+                <div>
+                  <i class="bi bi-person-circle me-1 text-primary"></i><strong>Academic Dean Office</strong>
+                  <span class="d-block text-secondary opacity-75">Published: 01 Oct 2026</span>
+                </div>
+                <button class="btn btn-sm btn-light border" onclick="EduManage.showToast('Downloading PTM_Slot_Schedule.pdf', 'info', 'Download')">
+                  <i class="bi bi-download me-1"></i> Slots.pdf
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notice 3 -->
+          <div class="col-12 col-lg-6 notice-card-item">
+            <div class="ed-card h-100 p-4">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="badge bg-info-subtle text-info border">Audience: Teachers</span>
+                <span class="badge-status pending">Internal Circular</span>
+              </div>
+              <h5 class="fw-bold mb-2">Submission of Question Papers & Blueprints for Term 2</h5>
+              <p class="text-muted small mb-3">
+                All subject teachers and HODs must submit 2 sets of moderated question papers along with marking schemes to the Examination Cell by 08th October 2026 without fail.
+              </p>
+              <div class="d-flex justify-content-between align-items-center small text-muted pt-3 border-top">
+                <div>
+                  <i class="bi bi-person-circle me-1 text-primary"></i><strong>Exam Controller</strong>
+                  <span class="d-block text-secondary opacity-75">Published: 28 Sep 2026</span>
+                </div>
+                <button class="btn btn-sm btn-light border" onclick="EduManage.showToast('Downloading Blueprint_Template.docx', 'info', 'Download')">
+                  <i class="bi bi-download me-1"></i> Template
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notice 4 -->
+          <div class="col-12 col-lg-6 notice-card-item">
+            <div class="ed-card h-100 p-4">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="badge bg-success-subtle text-success border">Audience: Students</span>
+                <span class="badge-status active">Extracurricular</span>
+              </div>
+              <h5 class="fw-bold mb-2">Inter-School Science Fair Registrations Open</h5>
+              <p class="text-muted small mb-3">
+                Students from Classes 8 to 12 can submit their STEM working models, AI innovation demos, and renewable energy ideas to the Science Club faculty by 15th October.
+              </p>
+              <div class="d-flex justify-content-between align-items-center small text-muted pt-3 border-top">
+                <div>
+                  <i class="bi bi-person-circle me-1 text-primary"></i><strong>STEM Innovation Cell</strong>
+                  <span class="d-block text-secondary opacity-75">Published: 26 Sep 2026</span>
+                </div>
+                <button class="btn btn-sm btn-light border" onclick="EduManage.showToast('Downloading Registration_Guidelines.pdf', 'info', 'Download')">
+                  <i class="bi bi-download me-1"></i> Form.pdf
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="app-footer">
+        <div>&copy; 2026 <strong>EduManage SaaS</strong>. Delhi Public Academy.</div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- PUBLISH NOTICE MODAL -->
+  <div class="modal fade" id="publishNoticeModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold"><i class="bi bi-megaphone text-primary me-2"></i>Publish Circular / Notice</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <form onsubmit="handlePublishNotice(event)">
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label" for="noticeTitleInput">Notice Title *</label>
+              <input type="text" class="form-control" id="noticeTitleInput" required placeholder="e.g. Winter Uniform Guidelines 2026">
+            </div>
+            <div class="row g-2 mb-3">
+              <div class="col-6">
+                <label class="form-label" for="noticeAudienceInput">Audience *</label>
+                <select class="form-select" id="noticeAudienceInput" required>
+                  <option value="All">All (Students, Parents & Staff)</option>
+                  <option value="Parents">Parents Only</option>
+                  <option value="Teachers">Teachers & Faculty</option>
+                  <option value="Students">Students Only</option>
+                </select>
+              </div>
+              <div class="col-6">
+                <label class="form-label" for="noticeAuthorInput">Issuing Department</label>
+                <input type="text" class="form-control" id="noticeAuthorInput" value="Principal's Office">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="noticeContentInput">Circular Body Text *</label>
+              <textarea class="form-control" id="noticeContentInput" rows="4" required placeholder="Write official text..."></textarea>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="noticeAttachment">Official Circular PDF (Optional)</label>
+              <input type="file" class="form-control" id="noticeAttachment">
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="sendSmsToggle" checked>
+              <label class="form-check-label small" for="sendSmsToggle">Send instantaneous SMS and mobile push notification alert</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-ed-outline" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-ed-primary">Broadcast & Publish</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    function filterNotices() {
+      const q = document.getElementById('noticeSearchInput').value.toLowerCase();
+      const aud = document.getElementById('audienceFilter').value.toLowerCase();
+      const cards = document.querySelectorAll('.notice-card-item');
+      cards.forEach(c => {
+        const text = c.innerText.toLowerCase();
+        const matchesQ = text.includes(q);
+        const matchesAud = !aud || text.includes(aud);
+        c.style.display = (matchesQ && matchesAud) ? '' : 'none';
+      });
+    }
+
+    function handlePublishNotice(e) {
+      e.preventDefault();
+      const title = document.getElementById('noticeTitleInput').value;
+      const aud = document.getElementById('noticeAudienceInput').value;
+      const author = document.getElementById('noticeAuthorInput').value;
+      const content = document.getElementById('noticeContentInput').value;
+
+      const container = document.getElementById('noticesContainer');
+      const div = document.createElement('div');
+      div.className = 'col-12 col-lg-6 notice-card-item';
+      div.innerHTML = `
+        <div class="ed-card h-100 p-4">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <span class="badge bg-primary-subtle text-primary border">Audience: ${aud}</span>
+            <span class="badge bg-success text-white">Just Published</span>
+          </div>
+          <h5 class="fw-bold mb-2">${title}</h5>
+          <p class="text-muted small mb-3">${content}</p>
+          <div class="d-flex justify-content-between align-items-center small text-muted pt-3 border-top">
+            <div>
+              <i class="bi bi-person-circle me-1 text-primary"></i><strong>${author}</strong>
+              <span class="d-block text-secondary opacity-75">Published: Just now</span>
+            </div>
+            <span class="badge bg-light text-dark border">Broadcasting</span>
+          </div>
+        </div>
+      `;
+      container.prepend(div);
+      bootstrap.Modal.getInstance(document.getElementById('publishNoticeModal')).hide();
+      EduManage.showToast(`Notice "${title}" published to audience: ${aud}!`, 'success', 'Notice Published');
+    }
+  </script>
+</body>
+</html>

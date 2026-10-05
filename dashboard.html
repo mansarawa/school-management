@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - EduManage School Management</title>
+  <meta name="description" content="EduManage Admin Dashboard for Delhi Public Academy.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sidebar-overlay"></div>
+
+  <div class="app-wrapper">
+    <!-- SIDEBAR -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <a href="dashboard.html" class="sidebar-brand">
+          <div class="sidebar-brand-icon">
+            <i class="bi bi-mortarboard-fill"></i>
+          </div>
+          <div>
+            <span class="sidebar-brand-text">EduManage</span>
+            <span class="sidebar-brand-badge">SaaS</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="sidebar-menu">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link-ed active">
+              <i class="bi bi-grid-1x2-fill"></i>
+              <span class="nav-text">Dashboard</span>
+            </a>
+          </li>
+
+          <li class="sidebar-section-title">Academic</li>
+          <li class="nav-item">
+            <a href="students.html" class="nav-link-ed">
+              <i class="bi bi-people-fill"></i>
+              <span class="nav-text">Students</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="teachers.html" class="nav-link-ed">
+              <i class="bi bi-person-video3"></i>
+              <span class="nav-text">Teachers</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="classes.html" class="nav-link-ed">
+              <i class="bi bi-building"></i>
+              <span class="nav-text">Classes</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="subjects.html" class="nav-link-ed">
+              <i class="bi bi-book-half"></i>
+              <span class="nav-text">Subjects</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="attendance.html" class="nav-link-ed">
+              <i class="bi bi-calendar-check-fill"></i>
+              <span class="nav-text">Attendance</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="timetable.html" class="nav-link-ed">
+              <i class="bi bi-calendar3-week-fill"></i>
+              <span class="nav-text">Timetable</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="exams.html" class="nav-link-ed">
+              <i class="bi bi-journal-check"></i>
+              <span class="nav-text">Exams</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="exam-results.html" class="nav-link-ed">
+              <i class="bi bi-trophy-fill"></i>
+              <span class="nav-text">Exam Results</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="homework.html" class="nav-link-ed">
+              <i class="bi bi-journal-bookmark-fill"></i>
+              <span class="nav-text">Homework</span>
+            </a>
+          </li>
+
+          <li class="sidebar-section-title">Finance</li>
+          <li class="nav-item">
+            <a href="fees.html" class="nav-link-ed">
+              <i class="bi bi-cash-coin"></i>
+              <span class="nav-text">Fees</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="fee-details.html" class="nav-link-ed">
+              <i class="bi bi-receipt"></i>
+              <span class="nav-text">Fee Invoices</span>
+            </a>
+          </li>
+
+          <li class="sidebar-section-title">Management</li>
+          <li class="nav-item">
+            <a href="parents.html" class="nav-link-ed">
+              <i class="bi bi-person-hearts"></i>
+              <span class="nav-text">Parents</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="library.html" class="nav-link-ed">
+              <i class="bi bi-collection-fill"></i>
+              <span class="nav-text">Library</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="transport.html" class="nav-link-ed">
+              <i class="bi bi-bus-front-fill"></i>
+              <span class="nav-text">Transport</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="notices.html" class="nav-link-ed">
+              <i class="bi bi-megaphone-fill"></i>
+              <span class="nav-text">Notices</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="events.html" class="nav-link-ed">
+              <i class="bi bi-calendar-event-fill"></i>
+              <span class="nav-text">Events</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="messages.html" class="nav-link-ed">
+              <i class="bi bi-chat-dots-fill"></i>
+              <span class="nav-text">Messages</span>
+              <span class="badge bg-danger rounded-pill ms-auto badge-nav">3</span>
+            </a>
+          </li>
+
+          <li class="sidebar-section-title">Reports</li>
+          <li class="nav-item">
+            <a href="reports.html" class="nav-link-ed">
+              <i class="bi bi-file-earmark-bar-graph-fill"></i>
+              <span class="nav-text">Reports</span>
+            </a>
+          </li>
+
+          <li class="sidebar-section-title">System</li>
+          <li class="nav-item">
+            <a href="settings.html" class="nav-link-ed">
+              <i class="bi bi-gear-fill"></i>
+              <span class="nav-text">Settings</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="profile.html" class="nav-link-ed">
+              <i class="bi bi-person-circle"></i>
+              <span class="nav-text">Profile</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user-card">
+          <div class="avatar-student" style="background:#4338ca;color:#fff;">RS</div>
+          <div class="user-details overflow-hidden">
+            <div class="fw-semibold text-white text-truncate small">Dr. Rajesh Sharma</div>
+            <div class="small text-muted text-truncate" style="font-size:0.75rem;">Principal / Admin</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="app-main">
+      <!-- TOPBAR -->
+      <header class="app-topbar">
+        <div class="topbar-left">
+          <button class="btn btn-icon d-none d-lg-flex" id="sidebarToggleBtn" title="Toggle Sidebar">
+            <i class="bi bi-list fs-5"></i>
+          </button>
+          <button class="btn btn-icon d-lg-none" id="mobileSidebarToggle" title="Open Menu">
+            <i class="bi bi-list fs-5"></i>
+          </button>
+
+          <button class="topbar-search-trigger" type="button">
+            <i class="bi bi-search"></i>
+            <span>Search students, teachers, fees...</span>
+            <kbd class="kbd-shortcut d-none d-md-inline-block">Ctrl K</kbd>
+          </button>
+        </div>
+
+        <div class="topbar-right">
+          <!-- Session Badge -->
+          <div class="d-none d-md-flex align-items-center gap-1 px-2 py-1 rounded bg-light-subtle border small">
+            <i class="bi bi-calendar2-range text-primary"></i>
+            <span class="fw-medium">AY 2026-27</span>
+          </div>
+
+          <!-- Quick Action Button -->
+          <div class="dropdown d-none d-sm-block">
+            <button class="btn btn-sm btn-ed-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-plus-lg"></i> Quick Action
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+              <li><a class="dropdown-item py-2" href="students.html"><i class="bi bi-person-plus text-primary me-2"></i> Enroll Student</a></li>
+              <li><a class="dropdown-item py-2" href="teachers.html"><i class="bi bi-person-badge text-success me-2"></i> Add Teacher</a></li>
+              <li><a class="dropdown-item py-2" href="fees.html"><i class="bi bi-cash-stack text-warning me-2"></i> Collect Fees</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item py-2" href="notices.html"><i class="bi bi-megaphone text-info me-2"></i> Publish Circular</a></li>
+            </ul>
+          </div>
+
+          <!-- Theme Toggle -->
+          <button class="btn btn-icon theme-toggle-btn" type="button" title="Toggle Dark/Light Mode">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+
+          <!-- Messages Link -->
+          <a href="messages.html" class="btn btn-icon" title="Messages">
+            <i class="bi bi-chat-dots"></i>
+            <span class="badge-dot"></span>
+          </a>
+
+          <!-- Notifications Dropdown -->
+          <div class="dropdown">
+            <button class="btn btn-icon" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Notifications">
+              <i class="bi bi-bell"></i>
+              <span class="badge-dot" id="notificationCountBadge"></span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end p-0 shadow-lg" style="width: 330px;">
+              <div class="p-3 border-bottom d-flex align-items-center justify-content-between">
+                <h6 class="mb-0 fw-bold">Notifications</h6>
+                <a href="#" class="small text-primary text-decoration-none" id="markAllNotificationsRead">Mark all read</a>
+              </div>
+              <div class="list-group list-group-flush" style="max-height: 290px; overflow-y: auto;">
+                <a href="students.html" class="list-group-item list-group-item-action p-3">
+                  <div class="d-flex align-items-start gap-2">
+                    <span class="stat-icon primary p-2" style="width:32px;height:32px;font-size:0.9rem;"><i class="bi bi-person-plus"></i></span>
+                    <div class="flex-grow-1">
+                      <p class="mb-0 small fw-medium">New student registered: Aarav Sharma</p>
+                      <small class="text-muted">10 mins ago</small>
+                    </div>
+                    <span class="notification-unread-dot bg-primary rounded-circle" style="width:7px;height:7px;"></span>
+                  </div>
+                </a>
+                <a href="fees.html" class="list-group-item list-group-item-action p-3">
+                  <div class="d-flex align-items-start gap-2">
+                    <span class="stat-icon success p-2" style="width:32px;height:32px;font-size:0.9rem;"><i class="bi bi-cash-stack"></i></span>
+                    <div class="flex-grow-1">
+                      <p class="mb-0 small fw-medium">Fee payment received ₹18,500</p>
+                      <small class="text-muted">25 mins ago</small>
+                    </div>
+                    <span class="notification-unread-dot bg-primary rounded-circle" style="width:7px;height:7px;"></span>
+                  </div>
+                </a>
+                <a href="teachers.html" class="list-group-item list-group-item-action p-3">
+                  <div class="d-flex align-items-start gap-2">
+                    <span class="stat-icon warning p-2" style="width:32px;height:32px;font-size:0.9rem;"><i class="bi bi-person-badge"></i></span>
+                    <div class="flex-grow-1">
+                      <p class="mb-0 small fw-medium">Dr. Kapoor uploaded Term syllabus</p>
+                      <small class="text-muted">1 hour ago</small>
+                    </div>
+                  </div>
+                </a>
+                <a href="exams.html" class="list-group-item list-group-item-action p-3">
+                  <div class="d-flex align-items-start gap-2">
+                    <span class="stat-icon info p-2" style="width:32px;height:32px;font-size:0.9rem;"><i class="bi bi-clock-history"></i></span>
+                    <div class="flex-grow-1">
+                      <p class="mb-0 small fw-medium">Mid-Term exam schedule published</p>
+                      <small class="text-muted">3 hours ago</small>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="p-2 border-top text-center">
+                <a href="notices.html" class="small text-decoration-none fw-semibold">View All School Circulars</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile Dropdown -->
+          <div class="dropdown">
+            <button class="btn p-0 border-0 d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="avatar-student shadow-sm" style="background:#4338ca;color:#fff;">RS</div>
+              <div class="text-start d-none d-xl-block">
+                <div class="fw-bold small text-dark-emphasis mb-0" style="line-height:1.2;">Dr. Rajesh Sharma</div>
+                <small class="text-muted" style="font-size:0.75rem;">Administrator</small>
+              </div>
+              <i class="bi bi-chevron-down text-muted small ms-1"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+              <li class="px-3 py-2 border-bottom">
+                <div class="fw-bold">Dr. Rajesh Sharma</div>
+                <div class="small text-muted">admin@dpa.edu.in</div>
+              </li>
+              <li><a class="dropdown-item py-2" href="profile.html"><i class="bi bi-person me-2"></i> My Profile</a></li>
+              <li><a class="dropdown-item py-2" href="settings.html"><i class="bi bi-gear me-2"></i> School Settings</a></li>
+              <li><a class="dropdown-item py-2" href="reports.html"><i class="bi bi-graph-up me-2"></i> Audit Logs</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item py-2 text-danger" href="index.html"><i class="bi bi-box-arrow-right me-2"></i> Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- CONTENT BODY -->
+      <main class="app-content">
+        <!-- Welcome Hero Banner -->
+        <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4">
+          <div>
+            <h2 class="fw-bold mb-1">Good Morning, Admin 👋</h2>
+            <p class="text-muted mb-0">Here's what's happening in Delhi Public Academy today.</p>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="attendance.html" class="btn btn-ed-outline">
+              <i class="bi bi-calendar-check"></i> Mark Attendance
+            </a>
+            <a href="students.html" class="btn btn-ed-primary">
+              <i class="bi bi-plus-lg"></i> Add Student
+            </a>
+          </div>
+        </div>
+
+        <!-- 8 STATISTIC CARDS -->
+        <div class="row g-3 g-xl-4 mb-4">
+          <!-- Stat 1 -->
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="stat-card">
+              <div>
+                <div class="stat-label">Total Students</div>
+                <div class="stat-value">1,248</div>
+                <div class="stat-trend up">
+                  <i class="bi bi-arrow-up-short"></i> +4.2% this session
+                </div>
+              </div>
+              <div class="stat-icon primary">
+                <i class="bi bi-people-fill"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stat 2 -->
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="stat-card">
+              <div>
+                <div class="stat-label">Total Teachers</div>
+                <div class="stat-value">86</div>
+                <div class="stat-trend up">
+                  <i class="bi bi-arrow-up-short"></i> +2 new joined
+                </div>
+              </div>
+              <div class="stat-icon success">
+                <i class="bi bi-person-video3"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stat 3 -->
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="stat-card">
+              <div>
+                <div class="stat-label">Total Classes</div>
+                <div class="stat-value">42</div>
+                <div class="stat-trend text-muted bg-light">
+                  <i class="bi bi-dash"></i> 12 Grades (A-C)
+                </div>
+              </div>
+              <div class="stat-icon info">
+                <i class="bi bi-building"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stat 4 -->
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="stat-card">
+              <div>
+                <div class="stat-label">Total Revenue</div>
+                <div class="stat-value">₹24,85,000</div>
+                <div class="stat-trend up">
+                  <i class="bi bi-arrow-up-short"></i> 88% collected
+                </div>
+              </div>
+              <div class="stat-icon warning">
+                <i class="bi bi-cash-stack"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stat 5 -->
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="stat-card">
+              <div>
+                <div class="stat-label">Present Today</div>
+                <div class="stat-value text-success">1,087</div>
+                <div class="stat-trend up">
+                  <i class="bi bi-check2"></i> 87.1% turnout
+                </div>
+              </div>
+              <div class="stat-icon success">
+                <i class="bi bi-person-check-fill"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stat 6 -->
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="stat-card">
+              <div>
+                <div class="stat-label">Absent Today</div>
+                <div class="stat-value text-danger">161</div>
+                <div class="stat-trend down">
+                  <i class="bi bi-exclamation-circle"></i> 12.9% leave
+                </div>
+              </div>
+              <div class="stat-icon danger">
+                <i class="bi bi-person-x-fill"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stat 7 -->
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="stat-card">
+              <div>
+                <div class="stat-label">Pending Fees</div>
+                <div class="stat-value text-warning">₹3,45,000</div>
+                <div class="stat-trend down">
+                  <i class="bi bi-clock-history"></i> 42 invoices
+                </div>
+              </div>
+              <div class="stat-icon warning">
+                <i class="bi bi-hourglass-split"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stat 8 -->
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="stat-card">
+              <div>
+                <div class="stat-label">Upcoming Exams</div>
+                <div class="stat-value">6</div>
+                <div class="stat-trend text-primary bg-primary-subtle">
+                  <i class="bi bi-calendar-event"></i> Next in 4 days
+                </div>
+              </div>
+              <div class="stat-icon primary">
+                <i class="bi bi-journal-bookmark-fill"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 DASHBOARD CHARTS ROW -->
+        <div class="row g-4 mb-4">
+          <!-- Chart A: Student Attendance Chart (Last 7 Days) -->
+          <div class="col-12 col-xl-8">
+            <div class="ed-card h-100">
+              <div class="ed-card-header">
+                <div>
+                  <h5 class="mb-0 fw-bold">Student Attendance Trend</h5>
+                  <small class="text-muted">Daily overall attendance percentage across all grades</small>
+                </div>
+                <div class="btn-group btn-group-sm">
+                  <button class="btn btn-outline-secondary active">7 Days</button>
+                  <button class="btn btn-outline-secondary">30 Days</button>
+                </div>
+              </div>
+              <div class="ed-card-body">
+                <div style="height: 300px; position: relative;">
+                  <canvas id="attendanceChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chart C: Student Distribution (Boys vs Girls) -->
+          <div class="col-12 col-xl-4">
+            <div class="ed-card h-100">
+              <div class="ed-card-header">
+                <div>
+                  <h5 class="mb-0 fw-bold">Gender Ratio</h5>
+                  <small class="text-muted">Total student demographics</small>
+                </div>
+                <span class="badge bg-primary-subtle text-primary">1,248 Total</span>
+              </div>
+              <div class="ed-card-body d-flex flex-column align-items-center justify-content-center">
+                <div style="height: 240px; width: 100%; position: relative;">
+                  <canvas id="genderChart"></canvas>
+                </div>
+                <div class="d-flex justify-content-around w-100 mt-3 pt-2 border-top">
+                  <div class="text-center">
+                    <span class="d-inline-block rounded-circle bg-primary me-1" style="width:10px;height:10px;"></span>
+                    <span class="small fw-semibold">Boys</span>
+                    <div class="fw-bold">686 (55%)</div>
+                  </div>
+                  <div class="text-center">
+                    <span class="d-inline-block rounded-circle bg-info me-1" style="width:10px;height:10px;"></span>
+                    <span class="small fw-semibold">Girls</span>
+                    <div class="fw-bold">562 (45%)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chart B: Monthly Fee Collection -->
+          <div class="col-12 col-xl-6">
+            <div class="ed-card h-100">
+              <div class="ed-card-header">
+                <div>
+                  <h5 class="mb-0 fw-bold">Monthly Fee Collection (₹ In Lakhs)</h5>
+                  <small class="text-muted">Comparison between collected and pending fees</small>
+                </div>
+                <span class="badge bg-success-subtle text-success">Target: ₹30L/Mo</span>
+              </div>
+              <div class="ed-card-body">
+                <div style="height: 290px; position: relative;">
+                  <canvas id="feeCollectionChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chart D: Class-wise Students -->
+          <div class="col-12 col-xl-6">
+            <div class="ed-card h-100">
+              <div class="ed-card-header">
+                <div>
+                  <h5 class="mb-0 fw-bold">Class-wise Student Strength</h5>
+                  <small class="text-muted">Distribution from Class 1 through Class 12</small>
+                </div>
+                <a href="classes.html" class="small text-decoration-none">Manage Classes &rarr;</a>
+              </div>
+              <div class="ed-card-body">
+                <div style="height: 290px; position: relative;">
+                  <canvas id="classStrengthChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3-COLUMN DETAILS SECTION: Recent Students, Recent Activities, Upcoming Events -->
+        <div class="row g-4">
+          <!-- Recent Students Table -->
+          <div class="col-12 col-xl-8">
+            <div class="ed-card">
+              <div class="ed-card-header">
+                <div>
+                  <h5 class="mb-0 fw-bold">Recent Admissions & Students</h5>
+                  <small class="text-muted">Newly enrolled students in academic year 2026-27</small>
+                </div>
+                <a href="students.html" class="btn btn-sm btn-ed-outline">View All Students</a>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-modern table-hover align-middle mb-0">
+                  <thead>
+                    <tr>
+                      <th>Student ID</th>
+                      <th>Student Name</th>
+                      <th>Class & Sec</th>
+                      <th>Gender</th>
+                      <th>Guardian Phone</th>
+                      <th>Status</th>
+                      <th class="text-end">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span class="fw-bold text-primary">#DPA-1041</span></td>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <div class="avatar-student" style="background:#e0e7ff;color:#4338ca;">AS</div>
+                          <div>
+                            <div class="fw-semibold">Aarav Sharma</div>
+                            <small class="text-muted">Adm: 12 Aug 2026</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td><span class="badge bg-light text-dark border">Class 10-A</span></td>
+                      <td>Male</td>
+                      <td>+91 98712 34567</td>
+                      <td><span class="badge-status active"><i class="bi bi-circle-fill" style="font-size:6px;"></i> Active</span></td>
+                      <td class="text-end">
+                        <div class="dropdown">
+                          <button class="btn btn-sm btn-light border" type="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-three-dots"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                            <li><a class="dropdown-item" href="student-details.html"><i class="bi bi-eye text-primary me-2"></i> View Profile</a></li>
+                            <li><a class="dropdown-item" href="fees.html"><i class="bi bi-receipt text-warning me-2"></i> Fee History</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="#" onclick="EduManage.showToast('Student archived', 'info', 'Record Updated')"><i class="bi bi-trash me-2"></i> Delete</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td><span class="fw-bold text-primary">#DPA-1042</span></td>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <div class="avatar-student" style="background:#fce7f3;color:#db2777;">AK</div>
+                          <div>
+                            <div class="fw-semibold">Ananya Kapoor</div>
+                            <small class="text-muted">Adm: 15 Aug 2026</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td><span class="badge bg-light text-dark border">Class 12-B</span></td>
+                      <td>Female</td>
+                      <td>+91 98101 88234</td>
+                      <td><span class="badge-status active"><i class="bi bi-circle-fill" style="font-size:6px;"></i> Active</span></td>
+                      <td class="text-end">
+                        <div class="dropdown">
+                          <button class="btn btn-sm btn-light border" type="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-three-dots"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                            <li><a class="dropdown-item" href="student-details.html"><i class="bi bi-eye text-primary me-2"></i> View Profile</a></li>
+                            <li><a class="dropdown-item" href="fees.html"><i class="bi bi-receipt text-warning me-2"></i> Fee History</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="#" onclick="EduManage.showToast('Student archived', 'info', 'Record Updated')"><i class="bi bi-trash me-2"></i> Delete</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td><span class="fw-bold text-primary">#DPA-1043</span></td>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <div class="avatar-student" style="background:#dcfce7;color:#16a34a;">RV</div>
+                          <div>
+                            <div class="fw-semibold">Rohan Verma</div>
+                            <small class="text-muted">Adm: 18 Aug 2026</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td><span class="badge bg-light text-dark border">Class 8-C</span></td>
+                      <td>Male</td>
+                      <td>+91 97115 90123</td>
+                      <td><span class="badge-status pending"><i class="bi bi-circle-fill" style="font-size:6px;"></i> Verification</span></td>
+                      <td class="text-end">
+                        <div class="dropdown">
+                          <button class="btn btn-sm btn-light border" type="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-three-dots"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                            <li><a class="dropdown-item" href="student-details.html"><i class="bi bi-eye text-primary me-2"></i> View Profile</a></li>
+                            <li><a class="dropdown-item" href="fees.html"><i class="bi bi-receipt text-warning me-2"></i> Fee History</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="#" onclick="EduManage.showToast('Student archived', 'info', 'Record Updated')"><i class="bi bi-trash me-2"></i> Delete</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td><span class="fw-bold text-primary">#DPA-1044</span></td>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <div class="avatar-student" style="background:#fef3c7;color:#d97706;">IS</div>
+                          <div>
+                            <div class="fw-semibold">Ishaan Sen</div>
+                            <small class="text-muted">Adm: 22 Aug 2026</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td><span class="badge bg-light text-dark border">Class 9-A</span></td>
+                      <td>Male</td>
+                      <td>+91 99532 11987</td>
+                      <td><span class="badge-status active"><i class="bi bi-circle-fill" style="font-size:6px;"></i> Active</span></td>
+                      <td class="text-end">
+                        <div class="dropdown">
+                          <button class="btn btn-sm btn-light border" type="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-three-dots"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                            <li><a class="dropdown-item" href="student-details.html"><i class="bi bi-eye text-primary me-2"></i> View Profile</a></li>
+                            <li><a class="dropdown-item" href="fees.html"><i class="bi bi-receipt text-warning me-2"></i> Fee History</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="#" onclick="EduManage.showToast('Student archived', 'info', 'Record Updated')"><i class="bi bi-trash me-2"></i> Delete</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td><span class="fw-bold text-primary">#DPA-1045</span></td>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <div class="avatar-student" style="background:#e0f2fe;color:#0284c7;">PB</div>
+                          <div>
+                            <div class="fw-semibold">Pooja Bhatia</div>
+                            <small class="text-muted">Adm: 01 Sep 2026</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td><span class="badge bg-light text-dark border">Class 11-A</span></td>
+                      <td>Female</td>
+                      <td>+91 98991 76543</td>
+                      <td><span class="badge-status active"><i class="bi bi-circle-fill" style="font-size:6px;"></i> Active</span></td>
+                      <td class="text-end">
+                        <div class="dropdown">
+                          <button class="btn btn-sm btn-light border" type="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-three-dots"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                            <li><a class="dropdown-item" href="student-details.html"><i class="bi bi-eye text-primary me-2"></i> View Profile</a></li>
+                            <li><a class="dropdown-item" href="fees.html"><i class="bi bi-receipt text-warning me-2"></i> Fee History</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="#" onclick="EduManage.showToast('Student archived', 'info', 'Record Updated')"><i class="bi bi-trash me-2"></i> Delete</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Activities & Events Column -->
+          <div class="col-12 col-xl-4">
+            <!-- Recent Activities Feed -->
+            <div class="ed-card mb-4">
+              <div class="ed-card-header">
+                <div>
+                  <h5 class="mb-0 fw-bold">Live Activity Feed</h5>
+                  <small class="text-muted">Real-time school operations log</small>
+                </div>
+                <span class="badge bg-success-subtle text-success">Live</span>
+              </div>
+              <div class="ed-card-body">
+                <div class="activity-timeline">
+                  <div class="activity-item">
+                    <span class="activity-dot success"></span>
+                    <div class="small fw-semibold text-dark-emphasis">Rahul Mehta enrolled in Class 10-A</div>
+                    <small class="text-muted d-block">Admission formalised by Registrar</small>
+                    <small class="text-secondary opacity-75">12 mins ago</small>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot warning"></span>
+                    <div class="small fw-semibold text-dark-emphasis">Fee payment received from Ankit</div>
+                    <small class="text-muted d-block">₹18,500 credited via UPI • Receipt #REC-8921</small>
+                    <small class="text-secondary opacity-75">42 mins ago</small>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot info"></span>
+                    <div class="small fw-semibold text-dark-emphasis">New Faculty Onboarded</div>
+                    <small class="text-muted d-block">Mr. Rajesh Nair joined as PGT Physics</small>
+                    <small class="text-secondary opacity-75">2 hours ago</small>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot"></span>
+                    <div class="small fw-semibold text-dark-emphasis">Mathematics Exam Scheduled</div>
+                    <small class="text-muted d-block">Mid-Term Paper 1 scheduled for Class 10</small>
+                    <small class="text-secondary opacity-75">4 hours ago</small>
+                  </div>
+                  <div class="activity-item">
+                    <span class="activity-dot success"></span>
+                    <div class="small fw-semibold text-dark-emphasis">Public Circular Published</div>
+                    <small class="text-muted d-block">Annual Sports Meet Guidelines for Parents</small>
+                    <small class="text-secondary opacity-75">6 hours ago</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Upcoming Events -->
+            <div class="ed-card">
+              <div class="ed-card-header">
+                <div>
+                  <h5 class="mb-0 fw-bold">Upcoming Events</h5>
+                  <small class="text-muted">School calendar highlights</small>
+                </div>
+                <a href="events.html" class="small text-decoration-none">Calendar &rarr;</a>
+              </div>
+              <div class="ed-card-body p-3">
+                <div class="d-flex align-items-center gap-3 p-2 rounded border mb-2 bg-light-subtle">
+                  <div class="text-center p-2 rounded bg-primary text-white" style="min-width: 52px;">
+                    <div class="small fw-bold text-uppercase" style="font-size:0.65rem;">OCT</div>
+                    <div class="fs-5 fw-bold leading-none">12</div>
+                  </div>
+                  <div>
+                    <h6 class="mb-0 fw-bold">Annual Sports Day</h6>
+                    <small class="text-muted d-block"><i class="bi bi-clock me-1"></i>08:30 AM • School Main Grounds</small>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-3 p-2 rounded border mb-2 bg-light-subtle">
+                  <div class="text-center p-2 rounded bg-success text-white" style="min-width: 52px;">
+                    <div class="small fw-bold text-uppercase" style="font-size:0.65rem;">OCT</div>
+                    <div class="fs-5 fw-bold leading-none">18</div>
+                  </div>
+                  <div>
+                    <h6 class="mb-0 fw-bold">Parent Teacher Meeting (PTM)</h6>
+                    <small class="text-muted d-block"><i class="bi bi-clock me-1"></i>09:00 AM • Senior Auditorium</small>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-3 p-2 rounded border mb-2 bg-light-subtle">
+                  <div class="text-center p-2 rounded bg-info text-white" style="min-width: 52px;">
+                    <div class="small fw-bold text-uppercase" style="font-size:0.65rem;">OCT</div>
+                    <div class="fs-5 fw-bold leading-none">24</div>
+                  </div>
+                  <div>
+                    <h6 class="mb-0 fw-bold">Inter-School Science Exhibition</h6>
+                    <small class="text-muted d-block"><i class="bi bi-clock me-1"></i>10:00 AM • STEM Innovation Lab</small>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-3 p-2 rounded border bg-light-subtle">
+                  <div class="text-center p-2 rounded bg-warning text-white" style="min-width: 52px;">
+                    <div class="small fw-bold text-uppercase" style="font-size:0.65rem;">NOV</div>
+                    <div class="fs-5 fw-bold leading-none">05</div>
+                  </div>
+                  <div>
+                    <h6 class="mb-0 fw-bold">Golden Jubilee Annual Function</h6>
+                    <small class="text-muted d-block"><i class="bi bi-clock me-1"></i>05:00 PM • Siri Fort Auditorium</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="app-footer">
+        <div>&copy; 2026 <strong>EduManage SaaS</strong>. Delhi Public Academy.</div>
+        <div class="d-none d-sm-block">System Status: <span class="badge bg-success-subtle text-success">All Services Operational</span></div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Global Search Modal (Ctrl + K) -->
+  <div class="modal fade" id="globalSearchModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0 shadow-lg">
+        <div class="p-3 border-bottom d-flex align-items-center gap-2">
+          <i class="bi bi-search text-primary fs-5"></i>
+          <input type="text" id="globalModalSearchInput" class="form-control border-0 shadow-none fs-6" placeholder="Type to search students, teachers, fees, circulars, or jump to page...">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="globalSearchResults" style="max-height: 420px; overflow-y: auto;">
+          <!-- Injected via script.js -->
+        </div>
+        <div class="p-2 px-3 bg-light-subtle border-top d-flex justify-content-between align-items-center small text-muted">
+          <span>Navigate with <kbd>↑</kbd> <kbd>↓</kbd> and <kbd>Enter</kbd></span>
+          <span>Press <kbd>ESC</kbd> to exit</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toastContainer" class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+
+  <!-- Bootstrap & Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+    // DASHBOARD CHARTS INITIALIZATION
+    document.addEventListener('DOMContentLoaded', () => {
+      initDashboardCharts();
+    });
+
+    function initDashboardCharts() {
+      const isDark = document.documentElement.getAttribute('data-bs-theme') === 'dark';
+      const textColor = isDark ? '#cbd5e1' : '#64748b';
+      const gridColor = isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.06)';
+
+      // 1. Attendance Chart (Line/Area)
+      const ctxAtt = document.getElementById('attendanceChart');
+      if (ctxAtt) {
+        new Chart(ctxAtt, {
+          type: 'line',
+          data: {
+            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Today'],
+            datasets: [
+              {
+                label: 'Present Students',
+                data: [1150, 1180, 1140, 1195, 1160, 1050, 1087],
+                borderColor: '#4f46e5',
+                backgroundColor: 'rgba(79, 70, 229, 0.12)',
+                tension: 0.35,
+                fill: true,
+                pointBackgroundColor: '#4f46e5',
+                pointRadius: 4
+              },
+              {
+                label: 'Absent',
+                data: [98, 68, 108, 53, 88, 198, 161],
+                borderColor: '#ef4444',
+                backgroundColor: 'transparent',
+                borderDash: [5, 5],
+                tension: 0.35,
+                pointBackgroundColor: '#ef4444',
+                pointRadius: 3
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { position: 'top', labels: { color: textColor } }
+            },
+            scales: {
+              x: { grid: { color: gridColor }, ticks: { color: textColor } },
+              y: { grid: { color: gridColor }, ticks: { color: textColor } }
+            }
+          }
+        });
+      }
+
+      // 2. Gender Ratio Chart (Doughnut)
+      const ctxGender = document.getElementById('genderChart');
+      if (ctxGender) {
+        new Chart(ctxGender, {
+          type: 'doughnut',
+          data: {
+            labels: ['Boys', 'Girls'],
+            datasets: [{
+              data: [686, 562],
+              backgroundColor: ['#4f46e5', '#0ea5e9'],
+              hoverOffset: 6,
+              borderWidth: 0
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false }
+            },
+            cutout: '72%'
+          }
+        });
+      }
+
+      // 3. Fee Collection Chart (Bar)
+      const ctxFee = document.getElementById('feeCollectionChart');
+      if (ctxFee) {
+        new Chart(ctxFee, {
+          type: 'bar',
+          data: {
+            labels: ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+            datasets: [
+              {
+                label: 'Collected (₹ Lakhs)',
+                data: [26.5, 24.8, 22.0, 27.4, 25.1, 26.8, 24.85],
+                backgroundColor: '#10b981',
+                borderRadius: 6
+              },
+              {
+                label: 'Pending (₹ Lakhs)',
+                data: [3.2, 4.1, 5.8, 2.6, 3.4, 3.1, 3.45],
+                backgroundColor: '#f59e0b',
+                borderRadius: 6
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { position: 'top', labels: { color: textColor } }
+            },
+            scales: {
+              x: { grid: { display: false }, ticks: { color: textColor } },
+              y: { grid: { color: gridColor }, ticks: { color: textColor } }
+            }
+          }
+        });
+      }
+
+      // 4. Class-wise Students (Bar)
+      const ctxClass = document.getElementById('classStrengthChart');
+      if (ctxClass) {
+        new Chart(ctxClass, {
+          type: 'bar',
+          data: {
+            labels: ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10', 'C11', 'C12'],
+            datasets: [{
+              label: 'Students Enrolled',
+              data: [85, 92, 98, 104, 110, 115, 112, 108, 120, 124, 94, 86],
+              backgroundColor: '#6366f1',
+              borderRadius: 6
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false }
+            },
+            scales: {
+              x: { grid: { display: false }, ticks: { color: textColor } },
+              y: { grid: { color: gridColor }, ticks: { color: textColor } }
+            }
+          }
+        });
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty Profile: Dr. Sunita Kapoor - EduManage</title>
+  <meta name="description" content="Faculty dossier and timetable for Dr. Sunita Kapoor at Delhi Public Academy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sidebar-overlay"></div>
+
+  <div class="app-wrapper">
+    <!-- SIDEBAR -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <a href="dashboard.html" class="sidebar-brand">
+          <div class="sidebar-brand-icon"><i class="bi bi-mortarboard-fill"></i></div>
+          <div><span class="sidebar-brand-text">EduManage</span><span class="sidebar-brand-badge">SaaS</span></div>
+        </a>
+      </div>
+
+      <div class="sidebar-menu">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a href="dashboard.html" class="nav-link-ed"><i class="bi bi-grid-1x2-fill"></i><span class="nav-text">Dashboard</span></a></li>
+          <li class="sidebar-section-title">Academic</li>
+          <li class="nav-item"><a href="students.html" class="nav-link-ed"><i class="bi bi-people-fill"></i><span class="nav-text">Students</span></a></li>
+          <li class="nav-item"><a href="teachers.html" class="nav-link-ed active"><i class="bi bi-person-video3"></i><span class="nav-text">Teachers</span></a></li>
+          <li class="nav-item"><a href="classes.html" class="nav-link-ed"><i class="bi bi-building"></i><span class="nav-text">Classes</span></a></li>
+          <li class="nav-item"><a href="subjects.html" class="nav-link-ed"><i class="bi bi-book-half"></i><span class="nav-text">Subjects</span></a></li>
+          <li class="nav-item"><a href="attendance.html" class="nav-link-ed"><i class="bi bi-calendar-check-fill"></i><span class="nav-text">Attendance</span></a></li>
+          <li class="nav-item"><a href="timetable.html" class="nav-link-ed"><i class="bi bi-calendar3-week-fill"></i><span class="nav-text">Timetable</span></a></li>
+          <li class="nav-item"><a href="exams.html" class="nav-link-ed"><i class="bi bi-journal-check"></i><span class="nav-text">Exams</span></a></li>
+          <li class="nav-item"><a href="exam-results.html" class="nav-link-ed"><i class="bi bi-trophy-fill"></i><span class="nav-text">Exam Results</span></a></li>
+          <li class="nav-item"><a href="homework.html" class="nav-link-ed"><i class="bi bi-journal-bookmark-fill"></i><span class="nav-text">Homework</span></a></li>
+          <li class="sidebar-section-title">Finance</li>
+          <li class="nav-item"><a href="fees.html" class="nav-link-ed"><i class="bi bi-cash-coin"></i><span class="nav-text">Fees</span></a></li>
+          <li class="nav-item"><a href="fee-details.html" class="nav-link-ed"><i class="bi bi-receipt"></i><span class="nav-text">Fee Invoices</span></a></li>
+          <li class="sidebar-section-title">Management</li>
+          <li class="nav-item"><a href="parents.html" class="nav-link-ed"><i class="bi bi-person-hearts"></i><span class="nav-text">Parents</span></a></li>
+          <li class="nav-item"><a href="library.html" class="nav-link-ed"><i class="bi bi-collection-fill"></i><span class="nav-text">Library</span></a></li>
+          <li class="nav-item"><a href="transport.html" class="nav-link-ed"><i class="bi bi-bus-front-fill"></i><span class="nav-text">Transport</span></a></li>
+          <li class="nav-item"><a href="notices.html" class="nav-link-ed"><i class="bi bi-megaphone-fill"></i><span class="nav-text">Notices</span></a></li>
+          <li class="nav-item"><a href="events.html" class="nav-link-ed"><i class="bi bi-calendar-event-fill"></i><span class="nav-text">Events</span></a></li>
+          <li class="nav-item"><a href="messages.html" class="nav-link-ed"><i class="bi bi-chat-dots-fill"></i><span class="nav-text">Messages</span><span class="badge bg-danger rounded-pill ms-auto">3</span></a></li>
+          <li class="sidebar-section-title">Reports</li>
+          <li class="nav-item"><a href="reports.html" class="nav-link-ed"><i class="bi bi-file-earmark-bar-graph-fill"></i><span class="nav-text">Reports</span></a></li>
+          <li class="sidebar-section-title">System</li>
+          <li class="nav-item"><a href="settings.html" class="nav-link-ed"><i class="bi bi-gear-fill"></i><span class="nav-text">Settings</span></a></li>
+          <li class="nav-item"><a href="profile.html" class="nav-link-ed"><i class="bi bi-person-circle"></i><span class="nav-text">Profile</span></a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user-card">
+          <div class="avatar-student" style="background:#4338ca;color:#fff;">RS</div>
+          <div class="user-details overflow-hidden">
+            <div class="fw-semibold text-white text-truncate small">Dr. Rajesh Sharma</div>
+            <div class="small text-muted text-truncate" style="font-size:0.75rem;">Principal / Admin</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="app-main">
+      <header class="app-topbar">
+        <div class="topbar-left">
+          <button class="btn btn-icon d-none d-lg-flex" id="sidebarToggleBtn"><i class="bi bi-list fs-5"></i></button>
+          <button class="btn btn-icon d-lg-none" id="mobileSidebarToggle"><i class="bi bi-list fs-5"></i></button>
+          <button class="topbar-search-trigger" type="button">
+            <i class="bi bi-search"></i><span>Search faculty, subjects...</span>
+            <kbd class="kbd-shortcut d-none d-md-inline-block">Ctrl K</kbd>
+          </button>
+        </div>
+        <div class="topbar-right">
+          <button class="btn btn-icon theme-toggle-btn" type="button"><i class="bi bi-moon-stars-fill"></i></button>
+          <a href="messages.html" class="btn btn-icon"><i class="bi bi-chat-dots"></i><span class="badge-dot"></span></a>
+          <div class="dropdown">
+            <button class="btn p-0 border-0 d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown">
+              <div class="avatar-student" style="background:#4338ca;color:#fff;">RS</div>
+              <div class="text-start d-none d-xl-block">
+                <div class="fw-bold small text-dark-emphasis mb-0">Dr. Rajesh Sharma</div>
+                <small class="text-muted" style="font-size:0.75rem;">Administrator</small>
+              </div>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+              <li><a class="dropdown-item py-2" href="profile.html"><i class="bi bi-person me-2"></i> My Profile</a></li>
+              <li><a class="dropdown-item py-2" href="settings.html"><i class="bi bi-gear me-2"></i> Settings</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item py-2 text-danger" href="index.html"><i class="bi bi-box-arrow-right me-2"></i> Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- PAGE CONTENT -->
+      <main class="app-content">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-2 small">
+            <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+            <li class="breadcrumb-item"><a href="teachers.html">Teachers</a></li>
+            <li class="breadcrumb-item active">Dr. Sunita Kapoor</li>
+          </ol>
+        </nav>
+
+        <!-- PROFILE HEADER -->
+        <div class="ed-card mb-4">
+          <div class="ed-card-body p-4">
+            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-4">
+              <div class="d-flex align-items-center gap-3">
+                <div class="avatar-student shadow" style="width:78px;height:78px;font-size:1.8rem;background:linear-gradient(135deg, #10b981, #059669);color:#fff;">
+                  SK
+                </div>
+                <div>
+                  <div class="d-flex align-items-center gap-2 mb-1">
+                    <h3 class="fw-bold mb-0">Dr. Sunita Kapoor</h3>
+                    <span class="badge-status active"><i class="bi bi-circle-fill" style="font-size:6px;"></i> Active Faculty</span>
+                    <span class="badge bg-warning-subtle text-dark border">Head of Dept (Mathematics)</span>
+                  </div>
+                  <div class="d-flex flex-wrap align-items-center gap-3 text-muted small">
+                    <span><i class="bi bi-qr-code me-1 text-primary"></i><strong>ID:</strong> #TCH-101</span>
+                    <span><i class="bi bi-briefcase me-1 text-primary"></i>12 Years Exp</span>
+                    <span><i class="bi bi-envelope me-1 text-primary"></i>sunita.kapoor@dpa.edu.in</span>
+                    <span><i class="bi bi-telephone me-1 text-primary"></i>+91 98101 23456</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex flex-wrap gap-2">
+                <a href="messages.html" class="btn btn-ed-outline"><i class="bi bi-chat-text"></i> Send Message</a>
+                <a href="timetable.html" class="btn btn-ed-outline"><i class="bi bi-calendar3"></i> Class Schedule</a>
+                <button class="btn btn-ed-primary" onclick="EduManage.showToast('Faculty record saved', 'success', 'Saved')"><i class="bi bi-pencil"></i> Edit Profile</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Left Column -->
+          <div class="col-12 col-lg-4">
+            <div class="ed-card mb-4">
+              <div class="ed-card-header">
+                <h6 class="mb-0 fw-bold"><i class="bi bi-person text-primary me-2"></i>Faculty Details</h6>
+              </div>
+              <div class="ed-card-body p-0">
+                <table class="table mb-0 table-borderless">
+                  <tbody>
+                    <tr class="border-bottom"><th class="ps-4 text-muted small">Designation:</th><td class="fw-semibold">PGT Senior Mathematics</td></tr>
+                    <tr class="border-bottom"><th class="ps-4 text-muted small">Qualification:</th><td>Ph.D. Applied Math, B.Ed.</td></tr>
+                    <tr class="border-bottom"><th class="ps-4 text-muted small">University:</th><td>Delhi University (Gold Medalist)</td></tr>
+                    <tr class="border-bottom"><th class="ps-4 text-muted small">Joining Date:</th><td>14 July 2018 (8 Years)</td></tr>
+                    <tr class="border-bottom"><th class="ps-4 text-muted small">Employment Type:</th><td>Permanent / Full-Time</td></tr>
+                    <tr><th class="ps-4 text-muted small">Blood Group:</th><td><span class="badge bg-danger-subtle text-danger">O+</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Assigned Classes -->
+            <div class="ed-card">
+              <div class="ed-card-header">
+                <h6 class="mb-0 fw-bold"><i class="bi bi-building text-primary me-2"></i>Assigned Classes & Batches</h6>
+              </div>
+              <div class="list-group list-group-flush">
+                <div class="list-group-item d-flex justify-content-between align-items-center p-3">
+                  <div>
+                    <h6 class="mb-0 fw-bold">Class 10 - Section A</h6>
+                    <small class="text-muted">Class Teacher • 42 Students</small>
+                  </div>
+                  <a href="classes.html" class="badge bg-primary text-decoration-none">Room 204</a>
+                </div>
+                <div class="list-group-item d-flex justify-content-between align-items-center p-3">
+                  <div>
+                    <h6 class="mb-0 fw-bold">Class 12 - Section A</h6>
+                    <small class="text-muted">Subject Teacher (Higher Math) • 38 Students</small>
+                  </div>
+                  <a href="classes.html" class="badge bg-info text-decoration-none">Room 302</a>
+                </div>
+                <div class="list-group-item d-flex justify-content-between align-items-center p-3">
+                  <div>
+                    <h6 class="mb-0 fw-bold">Class 11 - Section B</h6>
+                    <small class="text-muted">Applied Math • 36 Students</small>
+                  </div>
+                  <a href="classes.html" class="badge bg-secondary text-decoration-none">Room 208</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="col-12 col-lg-8">
+            <!-- Weekly Teaching Timetable -->
+            <div class="ed-card mb-4">
+              <div class="ed-card-header">
+                <div>
+                  <h6 class="mb-0 fw-bold"><i class="bi bi-calendar-week text-primary me-2"></i>Weekly Teaching Schedule</h6>
+                  <small class="text-muted">Period allocations for Dr. Sunita Kapoor</small>
+                </div>
+                <a href="timetable.html" class="btn btn-sm btn-ed-outline">Full Matrix</a>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-bordered timetable-grid mb-0">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Day</th>
+                      <th>08:30 - 09:30</th>
+                      <th>09:30 - 10:30</th>
+                      <th>10:45 - 11:45</th>
+                      <th>12:30 - 01:30</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="fw-bold">Mon</td>
+                      <td><div class="period-card math"><strong>Class 10-A</strong><br><small>Room 204</small></div></td>
+                      <td><div class="period-card break">HOD Office Hours</div></td>
+                      <td><div class="period-card math"><strong>Class 12-A</strong><br><small>Room 302</small></div></td>
+                      <td><div class="period-card math"><strong>Class 11-B</strong><br><small>Room 208</small></div></td>
+                    </tr>
+                    <tr>
+                      <td class="fw-bold">Tue</td>
+                      <td><div class="period-card math"><strong>Class 12-A</strong><br><small>Room 302</small></div></td>
+                      <td><div class="period-card math"><strong>Class 10-A</strong><br><small>Room 204</small></div></td>
+                      <td><div class="period-card break">Math Olympiad Prep</div></td>
+                      <td><div class="period-card math"><strong>Class 11-B</strong><br><small>Room 208</small></div></td>
+                    </tr>
+                    <tr>
+                      <td class="fw-bold">Wed</td>
+                      <td><div class="period-card math"><strong>Class 10-A</strong><br><small>Room 204</small></div></td>
+                      <td><div class="period-card math"><strong>Class 11-B</strong><br><small>Room 208</small></div></td>
+                      <td><div class="period-card math"><strong>Class 12-A</strong><br><small>Room 302</small></div></td>
+                      <td><div class="period-card break">Staff Meeting</div></td>
+                    </tr>
+                    <tr>
+                      <td class="fw-bold">Thu</td>
+                      <td><div class="period-card math"><strong>Class 11-B</strong><br><small>Room 208</small></div></td>
+                      <td><div class="period-card math"><strong>Class 12-A</strong><br><small>Room 302</small></div></td>
+                      <td><div class="period-card break">Curriculum Review</div></td>
+                      <td><div class="period-card math"><strong>Class 10-A</strong><br><small>Room 204</small></div></td>
+                    </tr>
+                    <tr>
+                      <td class="fw-bold">Fri</td>
+                      <td><div class="period-card math"><strong>Class 10-A</strong><br><small>Room 204</small></div></td>
+                      <td><div class="period-card math"><strong>Class 12-A</strong><br><small>Room 302</small></div></td>
+                      <td><div class="period-card math"><strong>Class 11-B</strong><br><small>Room 208</small></div></td>
+                      <td><div class="period-card break">Doubt Clearing</div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Performance Feedback -->
+            <div class="ed-card">
+              <div class="ed-card-header">
+                <h6 class="mb-0 fw-bold"><i class="bi bi-star-fill text-warning me-2"></i>Performance & Student Feedback</h6>
+                <span class="badge bg-success-subtle text-success fs-6">4.9 / 5.0 Rating</span>
+              </div>
+              <div class="ed-card-body">
+                <div class="row g-3">
+                  <div class="col-md-4">
+                    <div class="border rounded p-3 text-center">
+                      <div class="fs-4 fw-bold text-success">98.2%</div>
+                      <small class="text-muted">Board Exam Pass Rate</small>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="border rounded p-3 text-center">
+                      <div class="fs-4 fw-bold text-primary">24</div>
+                      <small class="text-muted">Weekly Teaching Hours</small>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="border rounded p-3 text-center">
+                      <div class="fs-4 fw-bold text-info">96%</div>
+                      <small class="text-muted">Attendance Punctuality</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="app-footer">
+        <div>&copy; 2026 <strong>EduManage SaaS</strong>. Delhi Public Academy.</div>
+      </footer>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

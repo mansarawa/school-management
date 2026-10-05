@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages & Communications - EduManage</title>
+  <meta name="description" content="Internal messaging, faculty chat, and parent communication portal for Delhi Public Academy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sidebar-overlay"></div>
+
+  <div class="app-wrapper">
+    <!-- SIDEBAR -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <a href="dashboard.html" class="sidebar-brand">
+          <div class="sidebar-brand-icon"><i class="bi bi-mortarboard-fill"></i></div>
+          <div><span class="sidebar-brand-text">EduManage</span><span class="sidebar-brand-badge">SaaS</span></div>
+        </a>
+      </div>
+
+      <div class="sidebar-menu">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a href="dashboard.html" class="nav-link-ed"><i class="bi bi-grid-1x2-fill"></i><span class="nav-text">Dashboard</span></a></li>
+          <li class="sidebar-section-title">Academic</li>
+          <li class="nav-item"><a href="students.html" class="nav-link-ed"><i class="bi bi-people-fill"></i><span class="nav-text">Students</span></a></li>
+          <li class="nav-item"><a href="teachers.html" class="nav-link-ed"><i class="bi bi-person-video3"></i><span class="nav-text">Teachers</span></a></li>
+          <li class="nav-item"><a href="classes.html" class="nav-link-ed"><i class="bi bi-building"></i><span class="nav-text">Classes</span></a></li>
+          <li class="nav-item"><a href="subjects.html" class="nav-link-ed"><i class="bi bi-book-half"></i><span class="nav-text">Subjects</span></a></li>
+          <li class="nav-item"><a href="attendance.html" class="nav-link-ed"><i class="bi bi-calendar-check-fill"></i><span class="nav-text">Attendance</span></a></li>
+          <li class="nav-item"><a href="timetable.html" class="nav-link-ed"><i class="bi bi-calendar3-week-fill"></i><span class="nav-text">Timetable</span></a></li>
+          <li class="nav-item"><a href="exams.html" class="nav-link-ed"><i class="bi bi-journal-check"></i><span class="nav-text">Exams</span></a></li>
+          <li class="nav-item"><a href="exam-results.html" class="nav-link-ed"><i class="bi bi-trophy-fill"></i><span class="nav-text">Exam Results</span></a></li>
+          <li class="nav-item"><a href="homework.html" class="nav-link-ed"><i class="bi bi-journal-bookmark-fill"></i><span class="nav-text">Homework</span></a></li>
+          <li class="sidebar-section-title">Finance</li>
+          <li class="nav-item"><a href="fees.html" class="nav-link-ed"><i class="bi bi-cash-coin"></i><span class="nav-text">Fees</span></a></li>
+          <li class="nav-item"><a href="fee-details.html" class="nav-link-ed"><i class="bi bi-receipt"></i><span class="nav-text">Fee Invoices</span></a></li>
+          <li class="sidebar-section-title">Management</li>
+          <li class="nav-item"><a href="parents.html" class="nav-link-ed"><i class="bi bi-person-hearts"></i><span class="nav-text">Parents</span></a></li>
+          <li class="nav-item"><a href="library.html" class="nav-link-ed"><i class="bi bi-collection-fill"></i><span class="nav-text">Library</span></a></li>
+          <li class="nav-item"><a href="transport.html" class="nav-link-ed"><i class="bi bi-bus-front-fill"></i><span class="nav-text">Transport</span></a></li>
+          <li class="nav-item"><a href="notices.html" class="nav-link-ed"><i class="bi bi-megaphone-fill"></i><span class="nav-text">Notices</span></a></li>
+          <li class="nav-item"><a href="events.html" class="nav-link-ed"><i class="bi bi-calendar-event-fill"></i><span class="nav-text">Events</span></a></li>
+          <li class="nav-item"><a href="messages.html" class="nav-link-ed active"><i class="bi bi-chat-dots-fill"></i><span class="nav-text">Messages</span><span class="badge bg-danger rounded-pill ms-auto">3</span></a></li>
+          <li class="sidebar-section-title">Reports</li>
+          <li class="nav-item"><a href="reports.html" class="nav-link-ed"><i class="bi bi-file-earmark-bar-graph-fill"></i><span class="nav-text">Reports</span></a></li>
+          <li class="sidebar-section-title">System</li>
+          <li class="nav-item"><a href="settings.html" class="nav-link-ed"><i class="bi bi-gear-fill"></i><span class="nav-text">Settings</span></a></li>
+          <li class="nav-item"><a href="profile.html" class="nav-link-ed"><i class="bi bi-person-circle"></i><span class="nav-text">Profile</span></a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user-card">
+          <div class="avatar-student" style="background:#4338ca;color:#fff;">RS</div>
+          <div class="user-details overflow-hidden">
+            <div class="fw-semibold text-white text-truncate small">Dr. Rajesh Sharma</div>
+            <div class="small text-muted text-truncate" style="font-size:0.75rem;">Principal / Admin</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="app-main">
+      <header class="app-topbar">
+        <div class="topbar-left">
+          <button class="btn btn-icon d-none d-lg-flex" id="sidebarToggleBtn"><i class="bi bi-list fs-5"></i></button>
+          <button class="btn btn-icon d-lg-none" id="mobileSidebarToggle"><i class="bi bi-list fs-5"></i></button>
+          <button class="topbar-search-trigger" type="button">
+            <i class="bi bi-search"></i><span>Search messages...</span>
+            <kbd class="kbd-shortcut d-none d-md-inline-block">Ctrl K</kbd>
+          </button>
+        </div>
+        <div class="topbar-right">
+          <button class="btn btn-icon theme-toggle-btn" type="button"><i class="bi bi-moon-stars-fill"></i></button>
+          <a href="messages.html" class="btn btn-icon"><i class="bi bi-chat-dots"></i><span class="badge-dot"></span></a>
+          <div class="dropdown">
+            <button class="btn p-0 border-0 d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown">
+              <div class="avatar-student" style="background:#4338ca;color:#fff;">RS</div>
+              <div class="text-start d-none d-xl-block">
+                <div class="fw-bold small text-dark-emphasis mb-0">Dr. Rajesh Sharma</div>
+                <small class="text-muted" style="font-size:0.75rem;">Administrator</small>
+              </div>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+              <li><a class="dropdown-item py-2" href="profile.html"><i class="bi bi-person me-2"></i> My Profile</a></li>
+              <li><a class="dropdown-item py-2" href="settings.html"><i class="bi bi-gear me-2"></i> Settings</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item py-2 text-danger" href="index.html"><i class="bi bi-box-arrow-right me-2"></i> Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- PAGE CONTENT -->
+      <main class="app-content">
+        <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4">
+          <div>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-1 small">
+                <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                <li class="breadcrumb-item active">Messages</li>
+              </ol>
+            </nav>
+            <h2 class="fw-bold mb-0">Internal Communications & Chat</h2>
+          </div>
+          <button class="btn btn-ed-primary" onclick="EduManage.showToast('Initiating new chat dialog', 'info', 'New Chat')">
+            <i class="bi bi-pencil-square"></i> Compose Message
+          </button>
+        </div>
+
+        <!-- CHAT CONTAINER -->
+        <div class="chat-container">
+          <!-- Chat Sidebar (Contact List) -->
+          <div class="chat-sidebar">
+            <div class="p-3 border-bottom">
+              <div class="input-group input-group-sm mb-2">
+                <span class="input-group-text bg-transparent border-end-0 text-muted"><i class="bi bi-search"></i></span>
+                <input type="text" id="contactSearch" class="form-control border-start-0" placeholder="Search conversations..." onkeyup="filterContacts()">
+              </div>
+              <div class="btn-group btn-group-sm w-100" role="group">
+                <button type="button" class="btn btn-outline-secondary active" onclick="filterRole('all')">All</button>
+                <button type="button" class="btn btn-outline-secondary" onclick="filterRole('teacher')">Faculty</button>
+                <button type="button" class="btn btn-outline-secondary" onclick="filterRole('parent')">Parents</button>
+                <button type="button" class="btn btn-outline-secondary" onclick="filterRole('student')">Students</button>
+              </div>
+            </div>
+
+            <div class="chat-contact-list" id="contactList">
+              <!-- Contact 1 -->
+              <div class="chat-contact-item active" data-role="teacher" onclick="selectContact(this, 'Dr. Sunita Kapoor', 'Senior Mathematics HOD', 'Online', 'SK')">
+                <div class="avatar-student" style="background:#e0e7ff;color:#4338ca;">SK</div>
+                <div class="flex-grow-1 overflow-hidden">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <span class="fw-bold text-dark-emphasis small text-truncate">Dr. Sunita Kapoor</span>
+                    <span class="text-muted" style="font-size:0.7rem;">10:14 AM</span>
+                  </div>
+                  <div class="small text-muted text-truncate contact-preview">Yes Dr. Rajesh, Mid-term papers ready...</div>
+                </div>
+                <span class="badge bg-primary rounded-circle p-1" style="width:8px;height:8px;"></span>
+              </div>
+
+              <!-- Contact 2 -->
+              <div class="chat-contact-item" data-role="parent" onclick="selectContact(this, 'Mr. Vijay Sharma', 'Parent (Ward: Aarav Sharma, 10-A)', 'Offline', 'VS')">
+                <div class="avatar-student" style="background:#fce7f3;color:#db2777;">VS</div>
+                <div class="flex-grow-1 overflow-hidden">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <span class="fw-bold text-dark-emphasis small text-truncate">Mr. Vijay Sharma</span>
+                    <span class="text-muted" style="font-size:0.7rem;">Yesterday</span>
+                  </div>
+                  <div class="small text-muted text-truncate contact-preview">Regarding Aarav's bus route pickup point...</div>
+                </div>
+              </div>
+
+              <!-- Contact 3 -->
+              <div class="chat-contact-item" data-role="teacher" onclick="selectContact(this, 'Mr. Rajesh Nair', 'Physics PGT', 'Online', 'RN')">
+                <div class="avatar-student" style="background:#dcfce7;color:#16a34a;">RN</div>
+                <div class="flex-grow-1 overflow-hidden">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <span class="fw-bold text-dark-emphasis small text-truncate">Mr. Rajesh Nair</span>
+                    <span class="text-muted" style="font-size:0.7rem;">02 Oct</span>
+                  </div>
+                  <div class="small text-muted text-truncate contact-preview">Physics lab equipment order received in stock.</div>
+                </div>
+              </div>
+
+              <!-- Contact 4 -->
+              <div class="chat-contact-item" data-role="student" onclick="selectContact(this, 'Ananya Verma', 'Student Head Girl (Class 12-B)', 'Online', 'AV')">
+                <div class="avatar-student" style="background:#fef3c7;color:#d97706;">AV</div>
+                <div class="flex-grow-1 overflow-hidden">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <span class="fw-bold text-dark-emphasis small text-truncate">Ananya Verma</span>
+                    <span class="text-muted" style="font-size:0.7rem;">28 Sep</span>
+                  </div>
+                  <div class="small text-muted text-truncate contact-preview">Thank you Sir for approving the student council meeting.</div>
+                </div>
+              </div>
+
+              <!-- Contact 5 -->
+              <div class="chat-contact-item" data-role="teacher" onclick="selectContact(this, 'Mrs. Pooja Sharma', 'English PGT', 'Offline', 'PS')">
+                <div class="avatar-student" style="background:#e0f2fe;color:#0284c7;">PS</div>
+                <div class="flex-grow-1 overflow-hidden">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <span class="fw-bold text-dark-emphasis small text-truncate">Mrs. Pooja Sharma</span>
+                    <span class="text-muted" style="font-size:0.7rem;">25 Sep</span>
+                  </div>
+                  <div class="small text-muted text-truncate contact-preview">English Olympiad shortlist submitted to office.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chat Main Conversation Area -->
+          <div class="chat-main">
+            <!-- Header -->
+            <div class="chat-header">
+              <div class="d-flex align-items-center gap-3">
+                <div class="avatar-student" id="activeContactAvatar" style="background:#e0e7ff;color:#4338ca;">SK</div>
+                <div>
+                  <h6 class="fw-bold mb-0" id="activeContactName">Dr. Sunita Kapoor</h6>
+                  <small class="text-muted" id="activeContactSub"><span class="badge bg-success-subtle text-success me-1">Online</span> Senior Mathematics HOD</small>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-icon" onclick="EduManage.showToast('Calling Dr. Sunita Kapoor...', 'info', 'Audio Call')"><i class="bi bi-telephone"></i></button>
+                <button class="btn btn-icon" onclick="EduManage.showToast('Starting video call room...', 'info', 'Video Call')"><i class="bi bi-camera-video"></i></button>
+                <a href="teacher-details.html" class="btn btn-icon" title="View Profile"><i class="bi bi-person-badge"></i></a>
+              </div>
+            </div>
+
+            <!-- Messages Thread -->
+            <div class="chat-messages" id="chatThread">
+              <div class="text-center my-2">
+                <span class="badge bg-light text-muted border small px-3 py-1">Today, 09:30 AM</span>
+              </div>
+
+              <div class="message-bubble message-in">
+                Good morning Dr. Rajesh. Just updating you regarding the Class 10 Mid-Term Mathematics question paper moderation.
+                <div class="message-time">09:32 AM</div>
+              </div>
+
+              <div class="message-bubble message-out">
+                Good morning Dr. Kapoor. Has the peer moderation committee reviewed both Set A and Set B according to the new CBSE 2026 competency weightage?
+                <div class="message-time">09:35 AM • Delivered</div>
+              </div>
+
+              <div class="message-bubble message-in">
+                Yes Sir, all 5 case-based questions have been moderated and vetted by external faculty. We have also prepared the step-wise marking rubric.
+                <div class="message-time">10:14 AM</div>
+              </div>
+
+              <div class="message-bubble message-out">
+                Excellent. Please submit the sealed prints to the Examination Superintendent by 2 PM today.
+                <div class="message-time">10:16 AM • Delivered</div>
+              </div>
+            </div>
+
+            <!-- Input Bar -->
+            <div class="chat-input-bar">
+              <button class="btn btn-icon" onclick="EduManage.showToast('Choose file or syllabus doc to send', 'info', 'Attach File')">
+                <i class="bi bi-paperclip"></i>
+              </button>
+              <input type="text" id="chatInput" class="form-control" placeholder="Write a message to Dr. Sunita Kapoor..." onkeypress="handleInputKey(event)">
+              <button class="btn btn-ed-primary px-3" onclick="sendMessage()">
+                <i class="bi bi-send-fill"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="app-footer">
+        <div>&copy; 2026 <strong>EduManage SaaS</strong>. Delhi Public Academy.</div>
+      </footer>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    function selectContact(el, name, role, status, initials) {
+      document.querySelectorAll('.chat-contact-item').forEach(c => c.classList.remove('active'));
+      el.classList.add('active');
+
+      document.getElementById('activeContactName').innerText = name;
+      document.getElementById('activeContactAvatar').innerText = initials;
+      const statusBadge = status === 'Online' ? '<span class="badge bg-success-subtle text-success me-1">Online</span>' : '<span class="badge bg-secondary-subtle text-secondary me-1">Offline</span>';
+      document.getElementById('activeContactSub').innerHTML = `${statusBadge} ${role}`;
+      document.getElementById('chatInput').placeholder = `Write a message to ${name}...`;
+
+      EduManage.showToast(`Switched conversation to ${name}`, 'info', 'Chat');
+    }
+
+    function handleInputKey(e) {
+      if (e.key === 'Enter') {
+        sendMessage();
+      }
+    }
+
+    function sendMessage() {
+      const input = document.getElementById('chatInput');
+      const text = input.value.trim();
+      if (!text) return;
+
+      const thread = document.getElementById('chatThread');
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+      // Outgoing bubble
+      const outBubble = document.createElement('div');
+      outBubble.className = 'message-bubble message-out';
+      outBubble.innerHTML = `${escapeHtml(text)}<div class="message-time">${timeStr} • Sent</div>`;
+      thread.appendChild(outBubble);
+      thread.scrollTop = thread.scrollHeight;
+      input.value = '';
+
+      // Update active contact preview
+      const activeContact = document.querySelector('.chat-contact-item.active .contact-preview');
+      if (activeContact) activeContact.innerText = text;
+
+      // Automated mock reply
+      setTimeout(() => {
+        const inBubble = document.createElement('div');
+        inBubble.className = 'message-bubble message-in';
+        inBubble.innerHTML = `Noted Sir, thank you! I will coordinate accordingly.<div class="message-time">${timeStr}</div>`;
+        thread.appendChild(inBubble);
+        thread.scrollTop = thread.scrollHeight;
+      }, 1200);
+    }
+
+    function filterContacts() {
+      const q = document.getElementById('contactSearch').value.toLowerCase();
+      const items = document.querySelectorAll('.chat-contact-item');
+      items.forEach(item => {
+        item.style.display = item.innerText.toLowerCase().includes(q) ? 'flex' : 'none';
+      });
+    }
+
+    function filterRole(role) {
+      document.querySelectorAll('.chat-sidebar .btn-group .btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const items = document.querySelectorAll('.chat-contact-item');
+      items.forEach(item => {
+        if (role === 'all' || item.getAttribute('data-role') === role) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
